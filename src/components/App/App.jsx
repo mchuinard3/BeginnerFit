@@ -13,9 +13,9 @@ import Footer from '../Footer/Footer';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
-import AboutPage from '../AboutPage/AboutPage';
-import UserPage from '../UserPage/UserPage';
-import InfoPage from '../InfoPage/InfoPage';
+import WorkoutHistory from '../WorkoutHistory/WorkoutHistory';
+import SelectFromWorkouts from '../SelectFromWorkouts/SelectFromWorkouts';
+import WorkoutType from '../WorkoutType/WorkoutType';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
@@ -43,9 +43,9 @@ function App() {
           <Route
             // shows AboutPage at all times (logged in or not)
             exact
-            path="/about"
+            path="/workoutHistory"
           >
-            <AboutPage />
+            <WorkoutHistory />
           </Route>
 
           {/* For protected routes, the view could show one of several things on the same route.
@@ -57,15 +57,15 @@ function App() {
             exact
             path="/user"
           >
-            <UserPage />
+            <SelectFromWorkouts />
           </ProtectedRoute>
 
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
-            path="/info"
+            path="/workoutType"
           >
-            <InfoPage />
+            <WorkoutType />
           </ProtectedRoute>
 
           <Route
