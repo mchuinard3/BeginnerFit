@@ -1,35 +1,45 @@
-import React from 'react';
+import { React, useEffect } from 'react';
 import LogOutButton from '../LogOutButton/LogOutButton';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { actionChannel } from 'redux-saga/effects';
+import workoutReducer from '../../redux/reducers/workout.reducer';
+
 
 function SelectFromWorkouts() {
   // this component doesn't do much to start, just renders some user reducer info to the DOM
   const user = useSelector((store) => store.user);
+
+  useEffect(() => {
+    dispatch({ type: 'GET_WORKOUT' });
+  }, []);
+
+  const workout = useSelector(store => store.workoutReducer);
+
+
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const handleWorkout1 = () => {
+    dispatch({ type: 'GET_SINGLE_WORKOUT', payload: workout[0].id });
+    history.push('/workoutType');
+
+  }
+  console.log(workout);
   return (
     <div className="container">
       <h2>Welcome, {user.username}!</h2>
       <p>Your ID is: {user.id}</p>
-      <p>Select From Workouts</p>
-      <button>Back Workout 1</button>
-      <button>Back Workout 2</button>
-      <button>Back Workout 3</button>
-      <button>Back Workout 4</button>
-      <button>Arm Workout 1</button>
-      <button>Arm Workout 2</button>
-      <button>Arm Workout 3</button>
-      <button>Arm Workout 4</button>
-      <button>Chest Workout 1</button>
-      <button>Chest Workout 2</button>
-      <button>Chest Workout 3</button>
-      <button>Chest Workout 4</button>
-      <button>Shoulder Workout 1</button>
-      <button>Shoulder Workout 2</button>
-      <button>Shoulder Workout 3</button>
-      <button>Shoulder Workout 4</button>
-      <button>Leg Workout 1</button>
-      <button>Leg Workout 2</button>
-      <button>Leg Workout 3</button>
-      <button>Leg Workout 4</button>
+
+
+      <h3>Select From Workouts</h3>
+      <ul>
+        {workout.map((exercise) => {
+          return (
+            <button onClick={(event) => handleWorkout1(exercise.id)}>{exercise.workout_name}</button>);
+        })}
+      </ul>
       <LogOutButton className="btn" />
     </div>
   );

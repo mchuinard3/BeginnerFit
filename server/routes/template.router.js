@@ -18,6 +18,16 @@ const {
     })
 })
 
+router.get('/:id', rejectUnauthenticated, (req, res) => {
+  const query = `SELECT * FROM "exercises" WHERE "id" = $1;`
+
+  pool.query(query, [req.params.id])
+    .then((results) => res.send(results.rows))
+    .catch((err) => {
+      console.log('Error in workout GET', err);
+    })
+})
+
 /**
  * POST route template
  */
