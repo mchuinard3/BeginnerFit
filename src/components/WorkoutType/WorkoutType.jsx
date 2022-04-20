@@ -11,6 +11,14 @@ import DatePicker from 'react-date-picker';
 
 function WorkoutType() {
 
+//   const addWorkout = (event) => {
+//     event.preventDefault();
+//     dispatch({type: 'ADD_WORKOUT', payload: {description: newItem, image_url: newPicture }})
+//     // console.log('Add', newItem);
+//     setNewItem('');
+//     setNewPicture('');
+// }
+
   const [value, onChange] = useState(new Date());
 
   const user = useSelector((store) => store.user);

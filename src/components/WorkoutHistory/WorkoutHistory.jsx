@@ -11,6 +11,35 @@ function WorkoutHistory() {
       <div>
         <p>Workout History</p>
       </div>
+
+      <div>
+        <p>User ID:</p>
+      </div>
+
+      <div>
+        <p>Exercise 1:</p>
+        <p>Weight Used:</p>
+      </div>
+
+      <div>
+        <p>Exercise 2:</p>
+        <p>Weight Used:</p>
+      </div>
+
+      <div>
+        <p>Exercise 3:</p>
+        <p>Weight Used:</p>
+      </div>
+
+      <div>
+        <p>Exercise 4:</p>
+        <p>Weight Used:</p>
+      </div>
+
+      <div>
+        <p>Date of Workout Completion:</p>
+      </div>
+
     </div>
   );
 }
