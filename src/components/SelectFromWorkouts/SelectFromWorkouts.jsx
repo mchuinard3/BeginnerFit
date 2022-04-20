@@ -21,8 +21,8 @@ function SelectFromWorkouts() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const handleWorkout1 = () => {
-    dispatch({ type: 'GET_SINGLE_WORKOUT', payload: workout[0].id });
+  const handleWorkout = (id) => {
+    dispatch({ type: 'GET_SINGLE_WORKOUT', payload: id });
     history.push('/workoutType');
 
   }
@@ -37,7 +37,7 @@ function SelectFromWorkouts() {
       <ul>
         {workout.map((exercise) => {
           return (
-            <button onClick={(event) => handleWorkout1(exercise.id)}>{exercise.workout_name}</button>);
+            <button onClick={(event) => handleWorkout(exercise.id)}>{exercise.workout_name}</button>);
         })}
       </ul>
       <LogOutButton className="btn" />
