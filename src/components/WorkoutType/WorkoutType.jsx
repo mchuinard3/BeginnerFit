@@ -1,7 +1,8 @@
-import { React, useEffect } from 'react';
+import { React, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import SelectFromWorkouts from '../SelectFromWorkouts/SelectFromWorkouts';
 import ReactPlayer from 'react-player';
+import DatePicker from 'react-date-picker';
 
 // This is one of our simplest components
 // It doesn't have local state
@@ -9,6 +10,8 @@ import ReactPlayer from 'react-player';
 // or even care what the redux state is
 
 function WorkoutType() {
+
+  const [value, onChange] = useState(new Date());
 
   const user = useSelector((store) => store.user);
 
@@ -84,7 +87,12 @@ function WorkoutType() {
         <h3>Weight Used:<input type="text" /> </h3>
         <h3>Click Completed Button When Done With Exercise:</h3>
         <h3><button onClick={handleExerciseBtn4}>Exercise 4 Completed</button></h3> </div>
+        <h3>Enter Workout Date:</h3>
+        <div>
+          <DatePicker onChange={onChange} value={value} />
+        </div>
         <h3>Click I'm Done Button When Entire Workout is Complete:</h3>
+       
         <button>I'm Done</button>
 
     </main>

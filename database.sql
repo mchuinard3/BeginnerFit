@@ -46,5 +46,11 @@ VALUES('Arm Workout 3', 'Dumbbell Incline Bicep Curl', 'https://www.youtube.com/
 INSERT INTO "exercises" (workout_name, exercise_1, video_1, exercise_2, video_2, exercise_3, video_3, exercise_4, video_4)
 VALUES('Arm Workout 4', 'Machine Assisted Chin-up', 'https://www.youtube.com/watch?v=D_4IlBjqjpw', 'EZ Bar Preacher Curl', 'https://www.youtube.com/watch?v=Gydpcouclx8', 'Tricep Tate Press', 'https://www.youtube.com/watch?v=cZJ-4Ll3uAo', 'Tricep JM Press', 'https://www.youtube.com/watch?v=rZcWkXEOKGI');
 
-
+CREATE TABLE "history" (
+"id" SERIAL PRIMARY KEY, 
+"user_id" VARCHAR (255),
+"exercises_id" VARCHAR(255),
+"weight_used" VARCHAR(255),
+"date" DATE
+);
 
