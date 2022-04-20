@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import SelectFromWorkouts from '../SelectFromWorkouts/SelectFromWorkouts';
 import ReactPlayer from 'react-player';
 import DatePicker from 'react-date-picker';
+import swal from 'sweetalert';
 
 // This is one of our simplest components
 // It doesn't have local state
@@ -24,22 +25,22 @@ function WorkoutType() {
   const user = useSelector((store) => store.user);
 
   const handleExerciseBtn1 = () => {
-    alert(`Great work ${user.username}! On to Exercise 2!`);
+    swal(`Great work ${user.username}! On to Exercise 2!`);
 
   }
 
   const handleExerciseBtn2 = () => {
-    alert(`You're crushing it ${user.username}! On to Exercise 3!`);
+    swal(`You're crushing it ${user.username}! On to Exercise 3!`);
 
   }
 
   const handleExerciseBtn3 = () => {
-    alert(`Almost done ${user.username}! On to Exercise 4!`);
+    swal(`Almost done ${user.username}! On to Exercise 4!`);
 
   }
 
   const handleExerciseBtn4 = () => {
-    alert(`Way to get it done ${user.username}! Click the I'm done button if your workout is complete!`);
+    swal(`Way to get it done ${user.username}! Click the I'm done button if your workout is complete!`);
 
   }
 

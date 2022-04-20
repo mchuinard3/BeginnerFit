@@ -49,8 +49,14 @@ VALUES('Arm Workout 4', 'Machine Assisted Chin-up', 'https://www.youtube.com/wat
 CREATE TABLE "history" (
 "id" SERIAL PRIMARY KEY, 
 "user_id" VARCHAR (255),
-"exercises_id" VARCHAR(255),
-"weight_used" VARCHAR(255),
+"exercise_1" VARCHAR(255),
+"weight_used_1" VARCHAR(255),
+"exercise_2" VARCHAR(255),
+"weight_used_2" VARCHAR(255),
+"exercise_3" VARCHAR(255),
+"weight_used_3" VARCHAR(255),
+"exercise_4" VARCHAR(255),
+"weight_used_4" VARCHAR(255),
 "date" DATE
 );
 
