@@ -10,6 +10,28 @@ import ReactPlayer from 'react-player';
 
 function WorkoutType() {
 
+  const user = useSelector((store) => store.user);
+
+  const handleExerciseBtn1 = () => {
+    alert(`Great work ${user.username}! On to Exercise 2!`);
+
+  }
+
+  const handleExerciseBtn2 = () => {
+    alert(`You're crushing it ${user.username}! On to Exercise 3!`);
+
+  }
+
+  const handleExerciseBtn3 = () => {
+    alert(`Almost done ${user.username}! On to Exercise 4!`);
+
+  }
+
+  const handleExerciseBtn4 = () => {
+    alert(`Way to get it done ${user.username}! Click the I'm done button if your workout is complete!`);
+
+  }
+
   useEffect(() => {
     dispatch({ type: 'GET_WORKOUT' });
   }, []);
@@ -33,7 +55,8 @@ function WorkoutType() {
         <h3> Complete 4 Sets of 10 Reps </h3>
         <h3>Sets Completed: <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /></h3>
         <h3>Weight Used:<input type="text" /> </h3>
-        <h3><button>Exercise Completed</button></h3> </div>
+        <h3>Click Completed Button When Done With Exercise:</h3>
+        <h3><button onClick={handleExerciseBtn1}>Exercise 1 Completed</button></h3> </div>
 
       <div> <h3>Exercise 2: </h3>
         <h3>{singleWorkout.exercise_2}</h3>
@@ -41,7 +64,8 @@ function WorkoutType() {
         <h3> Complete 4 Sets of 10 Reps </h3>
         <h3>Sets Completed: <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /></h3>
         <h3>Weight Used:<input type="text" /> </h3>
-        <h3><button>Exercise Completed</button></h3> </div>
+        <h3>Click Completed Button When Done With Exercise:</h3>
+        <h3><button onClick={handleExerciseBtn2}>Exercise 2 Completed</button></h3> </div>
 
       <div> <h3>Exercise 3: </h3>
         <h3>{singleWorkout.exercise_3}</h3>
@@ -49,7 +73,8 @@ function WorkoutType() {
         <h3> Complete 4 Sets of 10 Reps </h3>
         <h3>Sets Completed: <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /></h3>
         <h3>Weight Used:<input type="text" /> </h3>
-        <h3><button> Exercise Completed</button></h3> </div>
+        <h3>Click Completed Button When Done With Exercise:</h3>
+        <h3><button onClick={handleExerciseBtn3}> Exercise 3 Completed</button></h3> </div>
 
       <div> <h3>Exercise 4: </h3>
         <h3>{singleWorkout.exercise_4}</h3>
@@ -57,7 +82,10 @@ function WorkoutType() {
         <h3> Complete 4 Sets of 10 Reps </h3>
         <h3>Sets Completed: <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /></h3>
         <h3>Weight Used:<input type="text" /> </h3>
-        <h3><button>Exercise Completed</button></h3> </div>
+        <h3>Click Completed Button When Done With Exercise:</h3>
+        <h3><button onClick={handleExerciseBtn4}>Exercise 4 Completed</button></h3> </div>
+        <h3>Click I'm Done Button When Entire Workout is Complete:</h3>
+        <button>I'm Done</button>
 
     </main>
 
