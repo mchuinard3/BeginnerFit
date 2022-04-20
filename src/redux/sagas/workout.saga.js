@@ -23,20 +23,21 @@ function* getSingleWorkout(action) {
 
 }
 
-// function* addWorkout(action) {
-//     try {
-//       yield axios.post('/api/workoutHistory', action.payload)
-//       yield put({ type: 'GET_WORKOUT' });
+function* postWorkoutHistory(action) {
+    try {
+      yield axios.post('/api/workoutType', action.payload)
+      yield put({ type: 'GET_WORKOUT' });
   
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   }
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
 function* workoutSaga() {
     console.log('in workout saga');
     yield takeEvery('GET_WORKOUT', getWorkout);
     yield takeEvery('GET_SINGLE_WORKOUT', getSingleWorkout);
+    yield takeEvery('POST_WEIGHT_HISTORY', postWorkoutHistory);
 }
 
 export default workoutSaga;

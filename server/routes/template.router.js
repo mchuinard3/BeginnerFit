@@ -31,18 +31,18 @@ router.get('/:id', rejectUnauthenticated, (req, res) => {
 /**
  * POST route template
  */
-// router.post('/', rejectUnauthenticated, (req, res) => {
-//   // endpoint functionality
-//   const query = `INSERT INTO "history" ("user_id", "exercises_id", "weight_used", "date")
-//                   VALUES ($1, $2, $3, $4);`;
+router.post('/', rejectUnauthenticated, (req, res) => {
+  // endpoint functionality
+  const query = `INSERT INTO "history" ("user_id", "exercises_id", "weight_used_1", "weight_used_2", "weight_used_3", "weight_used_4", "date")
+                  VALUES ($1, $2, $3, $4, $5, $6, $7);`;
 
-//   const values = [req.body.user_id, req.body.exercises_id, req.body.weight_used, req.body.date]
-//   pool.query(query, values)
-//     .then(result => {
-//       res.sendStatus(201);
-//     }).catch(err => {
-//       console.log('Error in post', err);
-//     })
-// });
+  const values = [req.user.id, req.body.exercises_id, req.body.weight_used_1, req.body.weight_used_2, req.body.weight_used_3, req.body.weight_used_4, req.body.date]
+  pool.query(query, values)
+    .then(result => {
+      res.sendStatus(201);
+    }).catch(err => {
+      console.log('Error in post', err);
+    })
+});
 
 module.exports = router;
