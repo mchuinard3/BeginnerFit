@@ -18,6 +18,8 @@ router.get('/', rejectUnauthenticated, (req, res) => {
     })
 })
 
+
+
 router.get('/:id', rejectUnauthenticated, (req, res) => {
   const query = `SELECT * FROM "exercises" WHERE "id" = $1;`
 

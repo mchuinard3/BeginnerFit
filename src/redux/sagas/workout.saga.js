@@ -23,6 +23,17 @@ function* getSingleWorkout(action) {
 
 }
 
+function* getWorkoutHistory() {
+    
+    try {
+        const response = yield axios.get(`/api/workoutHistory`);
+        yield put({ type: 'SET_WORKOUT_HISTORY', payload: response.data });
+    } catch (error) {
+        console.log('Workout get request failed', error);
+    }
+
+}
+
 function* postWorkoutHistory(action) {
     try {
       yield axios.post('/api/workoutType', action.payload)
@@ -38,6 +49,7 @@ function* workoutSaga() {
     yield takeEvery('GET_WORKOUT', getWorkout);
     yield takeEvery('GET_SINGLE_WORKOUT', getSingleWorkout);
     yield takeEvery('POST_WEIGHT_HISTORY', postWorkoutHistory);
+    yield takeEvery('GET_WORKOUT_HISTORY', getWorkoutHistory);
 }
 
 export default workoutSaga;

@@ -3,6 +3,7 @@ import errors from './errors.reducer';
 import user from './user.reducer';
 import workoutReducer from './workout.reducer';
 import singleWorkoutReducer from './singleWorkout.reducer';
+import workoutHistoryReducer from './workoutHistory.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
   errors, // contains registrationMessage and loginMessage
   user,
   workoutReducer,
-  singleWorkoutReducer, // will have an id and username if someone is logged in
+  singleWorkoutReducer,
+  workoutHistoryReducer, // will have an id and username if someone is logged in
 });
 
 export default rootReducer;
