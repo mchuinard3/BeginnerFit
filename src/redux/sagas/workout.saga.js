@@ -44,12 +44,24 @@ function* postWorkoutHistory(action) {
     }
   }
 
+  function* deleteWorkout(action) {
+    const id = action.payload;
+    console.log('saga deleteItem func id:', id);
+    try {
+      yield axios.delete(`/api/workoutHistory/${id}`)
+      yield put({ type: 'GET_WORKOUT_HISTORY' })
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
 function* workoutSaga() {
     console.log('in workout saga');
     yield takeEvery('GET_WORKOUT', getWorkout);
     yield takeEvery('GET_SINGLE_WORKOUT', getSingleWorkout);
     yield takeEvery('POST_WEIGHT_HISTORY', postWorkoutHistory);
     yield takeEvery('GET_WORKOUT_HISTORY', getWorkoutHistory);
+    yield takeEvery('DELETE_WORKOUT', deleteWorkout);
 }
 
 export default workoutSaga;
