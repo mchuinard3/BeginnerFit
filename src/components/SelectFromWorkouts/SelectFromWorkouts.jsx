@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { actionChannel } from 'redux-saga/effects';
 import workoutReducer from '../../redux/reducers/workout.reducer';
+import WorkoutType from '../WorkoutType/WorkoutType';
+import WorkoutHistory from '../WorkoutHistory/WorkoutHistory';
 
 
 function SelectFromWorkouts() {

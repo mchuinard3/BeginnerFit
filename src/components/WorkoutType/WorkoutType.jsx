@@ -5,12 +5,13 @@ import ReactPlayer from 'react-player';
 import DatePicker from 'react-date-picker';
 import swal from 'sweetalert';
 import { useHistory } from 'react-router-dom';
+import WorkoutHistory from '../WorkoutHistory/WorkoutHistory';
 
 
 function WorkoutType() {
 
 
-  // const [value, onChange] = useState(new Date());
+
   const [value, setDate] = useState('');
   const history = useHistory();
 
@@ -19,24 +20,7 @@ function WorkoutType() {
   const [weightThree, setWeightThree] = useState(0);
   const [weightFour, setWeightFour] = useState(0);
 
-  const addWorkout = (event) => {
-    event.preventDefault();
-    dispatch({
-      type: 'POST_WEIGHT_HISTORY',
-      payload: {
-          date: value,
-          // exercises_id: exercises_id, // idk where your exercise id is
-          weight_used_1: weightOne,
-          weight_used_2: weightTwo,
-          weight_used_3: weightThree,
-          weight_used_4: weightFour
-          // ... you get the point
-      }
-      
-  })
-  history.push('/workoutHistory')
-  swal(`Way to get it done ${user.username}!`);
-  }
+  
 
 
 
@@ -53,6 +37,31 @@ function WorkoutType() {
   const dispatch = useDispatch();
   // const workout = useSelector(store => store.workoutReducer);
   console.log('workout:', singleWorkout);
+
+  const addWorkout = (event) => {
+    event.preventDefault();
+    dispatch({
+      type: 'POST_WEIGHT_HISTORY',
+      payload: {
+          date: value,
+          // exercises_id: exercises_id, // idk where your exercise id is
+          weight_used_1: weightOne,
+          weight_used_2: weightTwo,
+          weight_used_3: weightThree,
+          weight_used_4: weightFour,
+          exercise_1: singleWorkout.exercise_1,
+          exercise_2: singleWorkout.exercise_2,
+          exercise_3: singleWorkout.exercise_3, 
+          exercise_4: singleWorkout.exercise_4,
+          user_id: user.id   
+            
+          
+      }
+      
+  })
+  history.push('/workoutHistory')
+  swal(`Way to get it done ${user.username}!`);
+  }
 
   return (
     <main>
@@ -94,7 +103,7 @@ function WorkoutType() {
          </div>
         <h3>Enter Workout Date:</h3>
         <div>
-          {/* <DatePicker onChange={(event) => onChange(event.target.value)} /> */}
+          
           <input type="date" onChange={(event) => setDate(event.target.value)} /> 
         </div>
         <h3>Click I'm Done Button When Entire Workout is Complete:</h3>
