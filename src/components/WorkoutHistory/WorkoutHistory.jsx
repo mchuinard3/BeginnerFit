@@ -27,17 +27,19 @@ function WorkoutHistory() {
 
       <main>{workoutHistory.map(lift => (
         <>
-        <div>{lift.user_id}</div>
-        <div>{lift.workout_name}</div>
-        <div>{lift.exercise_1}</div>
-        <div>{lift.weight_used_1}</div>
-        <div>{lift.exercise_2}</div>
-        <div>{lift.weight_used_2}</div>
-        <div>{lift.exercise_3}</div>
-        <div>{lift.weight_used_3}</div>
-        <div>{lift.exercise_4}</div>
-        <div>{lift.weight_used_4}</div>
-        <div>{lift.date}</div>
+        <div> <h1>User ID: {lift.user_id} </h1></div>
+        <div> <h3>Workout Name: {lift.workout_name} </h3></div>
+        <div> <h4>Exercise 1: {lift.exercise_1} </h4></div> 
+        <div> <h4>Weight Used: {lift.weight_used_1} </h4> </div>
+        <div> <h4>Exercise 2: {lift.exercise_2} </h4></div>
+        <div> <h4>Weight Used: {lift.weight_used_2} </h4></div>
+        <div> <h4>Exercise 3: {lift.exercise_3} </h4></div>
+        <div> <h4>Weight Used: {lift.weight_used_3} </h4></div>
+        <div> <h4>Exercise 4: {lift.exercise_4}</h4></div>
+        <div> <h4>Weight Used: {lift.weight_used_4} </h4></div>
+        <div> <h4>Date of Workout Completion: {lift.date}</h4>
+        <button>Delete Workout From History</button> <button>Edit Weight Used</button>
+        </div>
         </>
         
         
