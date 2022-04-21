@@ -44,7 +44,7 @@ function WorkoutType() {
       type: 'POST_WEIGHT_HISTORY',
       payload: {
           date: value,
-          // exercises_id: exercises_id, // idk where your exercise id is
+          
           weight_used_1: weightOne,
           weight_used_2: weightTwo,
           weight_used_3: weightThree,
@@ -61,6 +61,7 @@ function WorkoutType() {
   })
   history.push('/workoutHistory')
   swal(`Way to get it done ${user.username}!`);
+  // setWeightOne({weightOne: ''}); 
   }
 
   return (

@@ -11,7 +11,7 @@ import { useDispatch } from 'react-redux';
 
 function WorkoutHistory() {
 
-  // const singleWorkout = useSelector(store => store.singleWorkoutReducer);
+  
   const workoutHistory = useSelector(store => store.workoutHistoryReducer);
   const dispatch = useDispatch();
 
@@ -19,13 +19,14 @@ function WorkoutHistory() {
     dispatch({ type: 'GET_WORKOUT_HISTORY' });
   }, []);
 
+ 
+
 
   return (
     
     <section className="container">
 
-      <button>Edit Weight Used On Most Recent Workout</button>
-      <p>Click "I'm Done" Button On Previous Page After Editing Weight</p>
+    
      
 
       <main>{workoutHistory.map(lift => (
@@ -41,7 +42,7 @@ function WorkoutHistory() {
         <div> <h4>Exercise 4: {lift.exercise_4}</h4></div>
         <div> <h4>Weight Used: {lift.weight_used_4} </h4></div>
         <div> <h4>Date of Workout Completion: {lift.date}</h4>
-        <button onClick={(event) => dispatch({ type: 'DELETE_WORKOUT', payload: lift.id })}>Delete Workout From History</button> 
+        <button onClick={(event) => dispatch({ type: 'DELETE_WORKOUT', payload: lift.id })}>Delete Workout From History</button> <button>Edit Weight Used</button>
         </div>
         </>
         
