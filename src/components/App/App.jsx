@@ -19,6 +19,7 @@ import WorkoutType from '../WorkoutType/WorkoutType';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
+import EditWorkout from '../EditWorkout/EditWorkout';
 
 import './App.css';
 
@@ -46,6 +47,14 @@ function App() {
             path="/workoutHistory"
           >
             <WorkoutHistory />
+          </Route>
+
+          <Route
+            // shows AboutPage at all times (logged in or not)
+            exact
+            path="/editWorkout"
+          >
+            <EditWorkout />
           </Route>
 
           {/* For protected routes, the view could show one of several things on the same route.

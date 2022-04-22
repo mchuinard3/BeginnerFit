@@ -3,6 +3,7 @@ import WorkoutType from '../WorkoutType/WorkoutType';
 import SelectFromWorkouts from '../SelectFromWorkouts/SelectFromWorkouts';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 // This is one of our simplest components
 // It doesn't have local state,
@@ -10,6 +11,14 @@ import { useDispatch } from 'react-redux';
 // or even care what the redux state is'
 
 function WorkoutHistory() {
+
+  const toEditPage = () => {
+    
+    history.push('/editWorkout');
+
+  }
+
+  const history = useHistory();
 
   
   const workoutHistory = useSelector(store => store.workoutHistoryReducer);
@@ -42,7 +51,7 @@ function WorkoutHistory() {
         <div> <h4>Exercise 4: {lift.exercise_4}</h4></div>
         <div> <h4>Weight Used: {lift.weight_used_4} </h4></div>
         <div> <h4>Date of Workout Completion: {lift.date}</h4>
-        <button onClick={(event) => dispatch({ type: 'DELETE_WORKOUT', payload: lift.id })}>Delete Workout From History</button> <button>Edit Weight Used</button>
+        <button onClick={(event) => dispatch({ type: 'DELETE_WORKOUT', payload: lift.id })}>Delete Workout From History</button> <button onClick={toEditPage}>Edit Weight Used</button>
         </div>
         </>
         

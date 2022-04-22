@@ -36,6 +36,10 @@ function Nav() {
               Workout History
             </Link>
 
+            <Link className="navLink" to="/editWorkout">
+              Edit Workout
+            </Link>
+
             <LogOutButton className="navLink" />
           </>
         )}
