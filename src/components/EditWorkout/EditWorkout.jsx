@@ -66,10 +66,7 @@ function EditWorkout({lift}) {
 
     const handleSave = () => {
         dispatch({ type: 'EDIT_WORKOUT', payload: editedWeights });
-        // setWeight1('');
-        // setWeight2('');
-        // setWeight3('');
-        // setWeight4('');
+      
         setEditWeight1(false);
         setEditWeight2(false);
         setEditWeight3(false);
