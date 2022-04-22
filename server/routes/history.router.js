@@ -38,15 +38,15 @@ router.get('/', rejectUnauthenticated, (req, res) => {
     SET "weight_used_1" = $1, 
     "weight_used_2" = $2, 
     "weight_used_3" = $3, 
-    "weight_used_4" = $4, 
-    WHERE user_id=$5;`;
+    "weight_used_4" = $4 
+    WHERE "id"=$5;`;
   
     const queryValues = [
       updatedWeight.weight_used_1,
       updatedWeight.weight_used_2,
       updatedWeight.weight_used_3,
       updatedWeight.weight_used_4,
-      req.user.id
+      req.body.id
       ];
   
     pool.query(queryText, queryValues)
