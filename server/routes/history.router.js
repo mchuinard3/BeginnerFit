@@ -31,6 +31,31 @@ router.get('/', rejectUnauthenticated, (req, res) => {
       });
   });
 
+  router.put('/', (req, res) => {
+    const updatedWeight = req.body;
+  
+    const queryText = `UPDATE "history"
+    SET "weight_used_1" = $1, 
+    "weight_used_2" = $2, 
+    "weight_used_3" = $3, 
+    "weight_used_4" = $4, 
+    WHERE id=$5;`;
+  
+    const queryValues = [
+      updatedWeight.weight_used_1,
+      updatedWeight.weight_used_2,
+      updatedWeight.weight_used_3,
+      updatedWeight.weight_used_4,
+      ];
+  
+    pool.query(queryText, queryValues)
+      .then(() => { res.sendStatus(200); })
+      .catch((err) => {
+        console.log('Error completing SELECT weight query', err);
+        res.sendStatus(500);
+      });
+  });
+
 
 module.exports = router;
 
