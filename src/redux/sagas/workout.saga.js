@@ -24,7 +24,7 @@ function* getSingleWorkout(action) {
 }
 
 function* getWorkoutHistory() {
-    
+
     try {
         const response = yield axios.get(`/api/workoutHistory`);
         yield put({ type: 'SET_WORKOUT_HISTORY', payload: response.data });
@@ -36,35 +36,35 @@ function* getWorkoutHistory() {
 
 function* postWorkoutHistory(action) {
     try {
-      yield axios.post('/api/workoutType', action.payload)
-      yield put({ type: 'GET_WORKOUT' });
-  
-    } catch (error) {
-      console.log(error);
-    }
-  }
+        yield axios.post('/api/workoutType', action.payload)
+        yield put({ type: 'GET_WORKOUT' });
 
-  function* deleteWorkout(action) {
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+function* deleteWorkout(action) {
     const id = action.payload;
     console.log('saga deleteWorkout func id:', id);
     try {
-      yield axios.delete(`/api/workoutHistory/${id}`)
-      yield put({ type: 'GET_WORKOUT_HISTORY' })
+        yield axios.delete(`/api/workoutHistory/${id}`)
+        yield put({ type: 'GET_WORKOUT_HISTORY' })
     } catch (error) {
-      console.log(error);
+        console.log(error);
     }
-  }
+}
 
-  function* editWorkout(action) {
+function* editWorkout(action) {
     const id = action.payload;
     console.log('saga editWorkout func id:', id);
     try {
-      yield axios.put(`/api/workoutHistory`, action.payload)
-      yield put({ type: 'GET_WORKOUT_HISTORY' })
+        yield axios.put(`/api/workoutHistory`, action.payload)
+        yield put({ type: 'GET_WORKOUT_HISTORY' })
     } catch (error) {
-      console.log(error);
+        console.log(error);
     }
-  }
+}
 
 function* workoutSaga() {
     console.log('in workout saga');

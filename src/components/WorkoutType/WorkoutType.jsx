@@ -59,7 +59,7 @@ function WorkoutType() {
       }
       
   })
-  history.push('/workoutHistory')
+  history.push(`/workoutHistory`)
   swal(`Way to get it done ${user.username}, check out your workout history!`);
   // setWeightOne({weightOne: ''}); 
   }
