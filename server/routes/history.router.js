@@ -15,7 +15,7 @@ router.get('/', rejectUnauthenticated, (req, res) => {
       })
   })
 
-  router.delete('/:id', (req, res) => {
+  router.delete('/:id', rejectUnauthenticated, (req, res) => {
     
     const id = req.params.id;
     console.log('router DELETE id:', id);
@@ -39,13 +39,14 @@ router.get('/', rejectUnauthenticated, (req, res) => {
     "weight_used_2" = $2, 
     "weight_used_3" = $3, 
     "weight_used_4" = $4, 
-    WHERE id=$5;`;
+    WHERE user_id=$5;`;
   
     const queryValues = [
       updatedWeight.weight_used_1,
       updatedWeight.weight_used_2,
       updatedWeight.weight_used_3,
       updatedWeight.weight_used_4,
+      req.user.id
       ];
   
     pool.query(queryText, queryValues)
