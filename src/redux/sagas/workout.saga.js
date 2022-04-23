@@ -57,7 +57,7 @@ function* deleteWorkout(action) {
 
 function* editWorkout(action) {
    
-    console.log('saga editWorkout func id:', id);
+    console.log('saga editWorkout func id:', action.payload);
     try {
         yield axios.put(`/api/workoutHistory`, action.payload)
         yield put({ type: 'GET_WORKOUT_HISTORY' })
