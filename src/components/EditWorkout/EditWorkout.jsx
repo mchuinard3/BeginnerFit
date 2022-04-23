@@ -1,21 +1,13 @@
 import { React, useEffect, useState } from 'react';
-import WorkoutType from '../WorkoutType/WorkoutType';
-import SelectFromWorkouts from '../SelectFromWorkouts/SelectFromWorkouts';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-import WorkoutHistory from '../WorkoutHistory/WorkoutHistory';
 
-function EditWorkout({lift}) {
+function EditWorkout({ lift }) {
 
     const [editWeight1, setEditWeight1] = useState(false);
     const [editWeight2, setEditWeight2] = useState(false);
     const [editWeight3, setEditWeight3] = useState(false);
     const [editWeight4, setEditWeight4] = useState(false);
-
-
-
-    const history = useHistory();
 
     const handleWeight1 = (addId) => {
         console.log('clicked');
@@ -41,10 +33,8 @@ function EditWorkout({lift}) {
         setWorkoutId(addId)
     }
 
-
     const workoutHistory = useSelector(store => store.workoutHistoryReducer);
     const dispatch = useDispatch();
-    console.log('HERE', workoutHistory[0]?.id);
 
     const [weight1, setWeight1] = useState(lift.weight_used_1);
     const [weight2, setWeight2] = useState(lift.weight_used_2);
@@ -66,19 +56,14 @@ function EditWorkout({lift}) {
 
     const handleSave = () => {
         dispatch({ type: 'EDIT_WORKOUT', payload: editedWeights });
-      
+
         setEditWeight1(false);
         setEditWeight2(false);
         setEditWeight3(false);
         setEditWeight4(false);
     }
 
-
-
-
-
-
-        return (
+    return (
 
         <>
             <div> <h1>User ID: {lift.user_id} </h1></div>
@@ -95,10 +80,8 @@ function EditWorkout({lift}) {
                 <button onClick={(event) => dispatch({ type: 'DELETE_WORKOUT', payload: lift.id })}>Delete Workout From History</button>
             </div>
         </>
-
-        )
+    )
 }
-
 
 export default EditWorkout;
 

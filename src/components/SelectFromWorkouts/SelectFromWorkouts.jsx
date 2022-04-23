@@ -3,14 +3,9 @@ import LogOutButton from '../LogOutButton/LogOutButton';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import { actionChannel } from 'redux-saga/effects';
-import workoutReducer from '../../redux/reducers/workout.reducer';
-import WorkoutType from '../WorkoutType/WorkoutType';
-import WorkoutHistory from '../WorkoutHistory/WorkoutHistory';
-
 
 function SelectFromWorkouts() {
-  // this component doesn't do much to start, just renders some user reducer info to the DOM
+
   const user = useSelector((store) => store.user);
 
   useEffect(() => {
@@ -18,10 +13,6 @@ function SelectFromWorkouts() {
   }, []);
 
   const workout = useSelector(store => store.workoutReducer);
-
-  
-
-
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -30,13 +21,11 @@ function SelectFromWorkouts() {
     history.push('/workoutType');
 
   }
-  console.log(workout);
+
   return (
     <div className="container">
       <h2>Welcome, {user.username}!</h2>
       <p>Your ID is: {user.id}</p>
-
-
       <h3>Select From Workouts</h3>
       <ul>
         {workout.map((exercise) => {
@@ -49,5 +38,4 @@ function SelectFromWorkouts() {
   );
 }
 
-// this allows us to use <App /> in index.js
 export default SelectFromWorkouts;

@@ -5,22 +5,16 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-
 import { useDispatch, useSelector } from 'react-redux';
-
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
-
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-
 import WorkoutHistory from '../WorkoutHistory/WorkoutHistory';
 import SelectFromWorkouts from '../SelectFromWorkouts/SelectFromWorkouts';
 import WorkoutType from '../WorkoutType/WorkoutType';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-
-
 import './App.css';
 
 function App() {
@@ -48,9 +42,6 @@ function App() {
           >
             <WorkoutHistory />
           </Route>
-
-          
-
           {/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:3000/user will show the UserPage if the user is logged in.
             If the user is not logged in, the ProtectedRoute will show the LoginPage (component).
