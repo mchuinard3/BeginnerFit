@@ -33,7 +33,7 @@ function EditWorkout({ lift }) {
         setWorkoutId(addId)
     }
 
-    const workoutHistory = useSelector(store => store.workoutHistoryReducer);
+    
     const dispatch = useDispatch();
 
     const [weight1, setWeight1] = useState(lift.weight_used_1);
@@ -50,9 +50,9 @@ function EditWorkout({ lift }) {
         id: workoutId
     }
 
-    useEffect(() => {
-        dispatch({ type: 'GET_WORKOUT_HISTORY' });
-    }, []);
+    // useEffect(() => {
+    //     dispatch({ type: 'GET_WORKOUT_HISTORY' });
+    // }, []);
 
     const handleSave = () => {
         dispatch({ type: 'EDIT_WORKOUT', payload: editedWeights });
