@@ -3,6 +3,12 @@ import LogOutButton from '../LogOutButton/LogOutButton';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+// import 'bootstrap/dist/js/bootstrap.bundle.min';
+// import 'bootstrap/dist/css/bootstrap.css';
+
+
 
 function SelectFromWorkouts() {
 
@@ -23,7 +29,9 @@ function SelectFromWorkouts() {
   }
 
   return (
+    
     <div className="container">
+      {/* <meta name=”viewport” content=”width=device-width, initial-scale=1.0"> */}
       <h2>Welcome, {user.username}!</h2>
       <p>Your ID is: {user.id}</p>
       <h3>Select From Workouts</h3>

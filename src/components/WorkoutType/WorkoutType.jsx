@@ -49,12 +49,14 @@ function WorkoutType() {
   return (
     <main>
       <h2>{singleWorkout.workout_name}</h2>
+      <div><h4>___________________________________________</h4></div>
       <div> <h3>Exercise 1: </h3>
         <h3>{singleWorkout.exercise_1}</h3>
         <ReactPlayer url={singleWorkout.video_1} />
         <h3> Complete 4 Sets of 10 Reps </h3>
         <h3>Sets Completed: <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /></h3>
         <h3>Weight Used:<input type="text" onChange={(event) => setWeightOne(event.target.value)} /> </h3>
+        <div><h4>___________________________________________</h4></div>
       </div>
 
       <div> <h3>Exercise 2: </h3>
@@ -63,6 +65,7 @@ function WorkoutType() {
         <h3> Complete 4 Sets of 10 Reps </h3>
         <h3>Sets Completed: <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /></h3>
         <h3>Weight Used:<input type="text" onChange={(event) => setWeightTwo(event.target.value)} /> </h3>
+        <div><h4>___________________________________________</h4></div>
       </div>
 
       <div> <h3>Exercise 3: </h3>
@@ -71,6 +74,7 @@ function WorkoutType() {
         <h3> Complete 4 Sets of 10 Reps </h3>
         <h3>Sets Completed: <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /></h3>
         <h3>Weight Used:<input type="text" onChange={(event) => setWeightThree(event.target.value)} /> </h3>
+        <div><h4>___________________________________________</h4></div>
       </div>
 
       <div> <h3>Exercise 4: </h3>
@@ -79,11 +83,13 @@ function WorkoutType() {
         <h3> Complete 4 Sets of 10 Reps </h3>
         <h3>Sets Completed: <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /></h3>
         <h3>Weight Used:<input type="text" onChange={(event) => setWeightFour(event.target.value)} /> </h3>
+        <div><h4>___________________________________________</h4></div>
       </div>
       <h3>Enter Workout Date:</h3>
       <div>
         <input type="date" onChange={(event) => setDate(event.target.value)} />
       </div>
+      
       <h3>Click I'm Done Button When Entire Workout is Complete:</h3>
       <button onClick={addWorkout}>I'm Done</button>
     </main>

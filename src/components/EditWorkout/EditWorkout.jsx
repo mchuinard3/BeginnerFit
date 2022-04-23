@@ -66,6 +66,7 @@ function EditWorkout({ lift }) {
     return (
 
         <>
+            <div><h4>___________________________________________</h4></div>
             <div> <h1>User ID: {lift.user_id} </h1></div>
             <div> <h3>Workout Name: {lift.workout_name} </h3></div>
             <div> <h4>Exercise 1: {lift.exercise_1} </h4></div>
@@ -79,6 +80,7 @@ function EditWorkout({ lift }) {
             <div> <h4>Date of Workout Completion: {lift.date}</h4>
                 <button onClick={(event) => dispatch({ type: 'DELETE_WORKOUT', payload: lift.id })}>Delete Workout From History</button>
             </div>
+            <div><h4>___________________________________________</h4></div>
         </>
     )
 }
