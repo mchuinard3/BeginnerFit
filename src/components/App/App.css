@@ -18,6 +18,22 @@ img {
   max-width: 100%;
 }
 
+.center {
+  text-align: center;
+}
+ 
+  
+.video {
+margin-left: auto;
+margin-right: auto;
+display: flex;
+text-align: center;
+position: relative;
+width: 500px;
+
+
+}
+
 
 
 .container {
@@ -107,3 +123,22 @@ input {
   margin: 5px;
   margin-bottom: 10px;
 }
+
+
+
+/* .video {
+  
+  width: 500px; */
+  /* position: relative;
+  background-position: 50%;
+  background-size: cover; */
+  /* margin: 0;
+  padding: 0;
+  border: 0; */
+  /* display: flex; */
+  /* align-items: center;
+  text-align: center; */
+  /* float: right 100px; 
+ 
+  
+} */
