@@ -52,7 +52,7 @@ function WorkoutType() {
       <div><h4>___________________________________________</h4></div>
       <div> <h3>Exercise 1: </h3>
         <h3>{singleWorkout.exercise_1}</h3>
-        <ReactPlayer url={singleWorkout.video_1} />
+        <ReactPlayer url={singleWorkout.video_1} width="1" margin="10" />
         <h3> Complete 4 Sets of 10 Reps </h3>
         <h3>Sets Completed: <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /></h3>
         <h3>Weight Used:<input type="text" onChange={(event) => setWeightOne(event.target.value)} /> </h3>
@@ -61,7 +61,7 @@ function WorkoutType() {
 
       <div> <h3>Exercise 2: </h3>
         <h3>{singleWorkout.exercise_2}</h3>
-        <ReactPlayer url={singleWorkout.video_2} />
+        <ReactPlayer url={singleWorkout.video_2} width="1" margin="10" />
         <h3> Complete 4 Sets of 10 Reps </h3>
         <h3>Sets Completed: <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /></h3>
         <h3>Weight Used:<input type="text" onChange={(event) => setWeightTwo(event.target.value)} /> </h3>
@@ -70,7 +70,7 @@ function WorkoutType() {
 
       <div> <h3>Exercise 3: </h3>
         <h3>{singleWorkout.exercise_3}</h3>
-        <ReactPlayer url={singleWorkout.video_3} />
+        <ReactPlayer url={singleWorkout.video_3} width="1" margin="10" />
         <h3> Complete 4 Sets of 10 Reps </h3>
         <h3>Sets Completed: <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /></h3>
         <h3>Weight Used:<input type="text" onChange={(event) => setWeightThree(event.target.value)} /> </h3>
@@ -79,7 +79,7 @@ function WorkoutType() {
 
       <div> <h3>Exercise 4: </h3>
         <h3>{singleWorkout.exercise_4}</h3>
-        <ReactPlayer url={singleWorkout.video_4} />
+        <ReactPlayer url={singleWorkout.video_4} width="1" margin="10" />
         <h3> Complete 4 Sets of 10 Reps </h3>
         <h3>Sets Completed: <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /></h3>
         <h3>Weight Used:<input type="text" onChange={(event) => setWeightFour(event.target.value)} /> </h3>

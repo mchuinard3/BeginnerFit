@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from 'react';
+import { React, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
@@ -16,11 +16,11 @@ function EditWorkout({ lift }) {
 
     const handleChange = (event, property) => {
         dispatch({
-            type: 'EDIT_ON_CHANGE', 
+            type: 'EDIT_ON_CHANGE',
             payload: {
                 property: property,
                 value: event.target.value
-            }  
+            }
         })
     }
 
@@ -42,60 +42,60 @@ function EditWorkout({ lift }) {
             <div> <h4>Exercise 1: {lift.exercise_1} </h4></div>
 
 
-            <div>  <div>{editMode ? 
+            <div>  <div>{editMode ?
                 <div>
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         value={editWorkout.weight_used_1}
                         onChange={(event) => handleChange(event, 'weight_used_1')} />
-                </div> 
-                : 
-                <div>
-                    <h4>Weight Used: {lift.weight_used_1} </h4> 
-                </div>}   
-            </div> </div>
-
-            <div> 
-                <h4>Exercise 2: {lift.exercise_2} </h4>
-            </div>
-            <div>  <div>{editMode ? 
-                <div>
-                    <input 
-                        type="text" 
-                        value={editWorkout.weight_used_2}
-                        onChange={(event) => handleChange(event, 'weight_used_2')} /> 
-                </div> 
+                </div>
                 :
                 <div>
-                    <h4>Weight Used: {lift.weight_used_2} </h4> 
+                    <h4>Weight Used: {lift.weight_used_1} </h4>
+                </div>}
+            </div> </div>
+
+            <div>
+                <h4>Exercise 2: {lift.exercise_2} </h4>
+            </div>
+            <div>  <div>{editMode ?
+                <div>
+                    <input
+                        type="text"
+                        value={editWorkout.weight_used_2}
+                        onChange={(event) => handleChange(event, 'weight_used_2')} />
+                </div>
+                :
+                <div>
+                    <h4>Weight Used: {lift.weight_used_2} </h4>
                 </div>}  </div> </div>
-            <div> 
+            <div>
                 <h4>Exercise 3: {lift.exercise_3} </h4>
             </div>
-            <div>  <div>{editMode ? 
+            <div>  <div>{editMode ?
                 <div>
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         value={editWorkout.weight_used_3}
-                        onChange={(event) => handleChange(event, 'weight_used_3')} /> 
+                        onChange={(event) => handleChange(event, 'weight_used_3')} />
                 </div>
-                : 
+                :
                 <div>
-                    <h4>Weight Used: {lift.weight_used_3} </h4> 
+                    <h4>Weight Used: {lift.weight_used_3} </h4>
                 </div>}   </div> </div>
-            <div> 
+            <div>
                 <h4>Exercise 4: {lift.exercise_4}</h4>
             </div>
             <div>  <div>{editMode ?
                 <div>
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         value={editWorkout.weight_used_4}
-                        onChange={(event) => handleChange(event, 'weight_used_4')} /> 
+                        onChange={(event) => handleChange(event, 'weight_used_4')} />
                 </div>
-                : 
+                :
                 <div>
-                    <h4>Weight Used: {lift.weight_used_4} </h4> 
+                    <h4>Weight Used: {lift.weight_used_4} </h4>
                 </div>}   </div> </div>
 
 
