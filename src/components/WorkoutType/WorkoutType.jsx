@@ -50,13 +50,13 @@ function WorkoutType() {
 
   return (
     <main className="center">
-     <Col style={{ fontSize: 40 }}> {singleWorkout.workout_name}</Col>
+      <Col style={{ fontSize: 40 }}> {singleWorkout.workout_name}</Col>
       <div>
         <h4>___________________________________________</h4>
       </div>
       <div>
-      <Col style={{ fontSize: 25 }}>Exercise 1: </Col>
-      <Col style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_1}</Col>
+        <Col style={{ fontSize: 25 }}>Exercise 1: </Col>
+        <Col style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_1}</Col>
         <div className="video">
           <ReactPlayer url={singleWorkout.video_1} />
         </div>
@@ -66,18 +66,18 @@ function WorkoutType() {
           <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
           <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
           <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
-          </Col>
-          <Col style={{ fontSize: 25 }}>Weight Used:
+        </Col>
+        <Col style={{ fontSize: 25 }}>Weight Used:
           <input type="text" className="border rounded" size="7" style={{ padding: 10, margin: 5, height: 25, width: 150 }} onChange={(event) => setWeightOne(event.target.value)} />
-          </Col>
+        </Col>
         <div>
           <h4>___________________________________________</h4>
         </div>
       </div>
 
       <div>
-      <Col style={{ fontSize: 25 }}>Exercise 2: </Col>
-      <Col style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_2}</Col>
+        <Col style={{ fontSize: 25 }}>Exercise 2: </Col>
+        <Col style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_2}</Col>
         <div className="video"><ReactPlayer url={singleWorkout.video_2} />
         </div>
         <Col style={{ fontSize: 25, padding: 4 }}> Complete 4 Sets of 10 Reps </Col>
@@ -86,15 +86,15 @@ function WorkoutType() {
           <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
           <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
           <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} /></Col>
-          <Col style={{ fontSize: 25 }}>Weight Used:<input type="text" className="border rounded" size="7" style={{ padding: 10, margin: 5, height: 25, width: 150 }} onChange={(event) => setWeightTwo(event.target.value)} /> </Col>
+        <Col style={{ fontSize: 25 }}>Weight Used:<input type="text" className="border rounded" size="7" style={{ padding: 10, margin: 5, height: 25, width: 150 }} onChange={(event) => setWeightTwo(event.target.value)} /> </Col>
         <div>
           <h4>___________________________________________</h4>
         </div>
       </div>
 
       <div>
-      <Col style={{ fontSize: 25 }}>Exercise 3: </Col>
-      <Col style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_3}</Col>
+        <Col style={{ fontSize: 25 }}>Exercise 3: </Col>
+        <Col style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_3}</Col>
         <div className="video">
           <ReactPlayer url={singleWorkout.video_3} />
         </div>
@@ -104,14 +104,14 @@ function WorkoutType() {
           <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
           <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
           <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} /></Col>
-          <Col style={{ fontSize: 25 }}>Weight Used:<input type="text" className="border rounded" size="7" style={{ padding: 10, margin: 5, height: 25, width: 150 }} onChange={(event) => setWeightThree(event.target.value)} /></Col>
+        <Col style={{ fontSize: 25 }}>Weight Used:<input type="text" className="border rounded" size="7" style={{ padding: 10, margin: 5, height: 25, width: 150 }} onChange={(event) => setWeightThree(event.target.value)} /></Col>
         <div>
           <h4>___________________________________________</h4>
         </div>
       </div>
 
       <div> <Col style={{ fontSize: 25 }}>Exercise 4: </Col>
-      <Col style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_4}</Col>
+        <Col style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_4}</Col>
         <div className="video">
           <ReactPlayer url={singleWorkout.video_4} />
         </div>
@@ -121,7 +121,7 @@ function WorkoutType() {
           <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
           <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
           <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} /></h3>
-          <Col style={{ fontSize: 25 }}>Weight Used:<input type="text" className="border rounded" size="7" style={{ padding: 10, margin: 5, height: 25, width: 150 }} onChange={(event) => setWeightFour(event.target.value)} /> </Col>
+        <Col style={{ fontSize: 25 }}>Weight Used:<input type="text" className="border rounded" size="7" style={{ padding: 10, margin: 5, height: 25, width: 150 }} onChange={(event) => setWeightFour(event.target.value)} /> </Col>
         <div>
           <h4>___________________________________________</h4>
         </div>

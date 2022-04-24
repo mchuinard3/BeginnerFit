@@ -21,6 +21,18 @@ img {
 .center {
   text-align: center;
 }
+
+.align {
+  
+  padding: 5px;
+  text-align: center;
+  width: 700px;
+  border: white;
+  height: 10px;
+  background-color: black;
+  
+  
+}
  
   
 .video {
