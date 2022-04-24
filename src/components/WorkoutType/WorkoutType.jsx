@@ -68,7 +68,7 @@ function WorkoutType() {
           <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
           </Col>
           <Col style={{ fontSize: 25 }}>Weight Used:
-          <input type="text" className="border rounded" size="7" style={{ padding: 10, margin: 5, height: 25, width: 120 }} onChange={(event) => setWeightOne(event.target.value)} />
+          <input type="text" className="border rounded" size="7" style={{ padding: 10, margin: 5, height: 25, width: 150 }} onChange={(event) => setWeightOne(event.target.value)} />
           </Col>
         <div>
           <h4>___________________________________________</h4>
