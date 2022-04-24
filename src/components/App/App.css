@@ -22,6 +22,17 @@ img {
   text-align: center;
 }
 
+.centerTitle {
+  text-align: center;
+  font-size: 25px;
+}
+
+.alignTable {
+margin-left: -10px;
+text-align: center;
+position: relative;
+}
+
 .align {
   
   padding: 5px;
@@ -30,8 +41,16 @@ img {
   border: white;
   height: 10px;
   background-color: black;
-  
-  
+}
+
+.centerButton {
+  text-align: center;
+  margin-top: -13px;
+  margin-bottom: 3px;
+}
+
+.centerText {
+  text-align: center;
 }
  
   

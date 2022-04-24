@@ -50,7 +50,7 @@ function WorkoutType() {
 
   return (
     <main className="center">
-      <Col style={{ fontSize: 40 }}> {singleWorkout.workout_name}</Col>
+      <Col style={{ fontSize: 35 }}> {singleWorkout.workout_name}</Col>
       <div>
         <h4>___________________________________________</h4>
       </div>
