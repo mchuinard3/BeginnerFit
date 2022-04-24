@@ -35,78 +35,85 @@ function EditWorkout({ lift }) {
     return (
 
         <>
-            {/* <div><h4>___________________________________________</h4></div> */}
-            <Table className="align" variant="dark" bordered size="md">   <h5><th>User ID: {lift.user_id}  </th></h5>
-               
 
-                    <h5><th>Workout Name: {lift.workout_name} </th></h5>
+            <Table stripped bordered hover variant="dark" size="sm">
+                <thead>
+                    <tr>
+                        <th width="170">User ID</th>
+                        <th width="170">Workout Name</th>
+                        <th width="170">Exercise 1</th>
+                        <th width="170">Weight Used</th>
+                        <th width="170">Exercise 2</th>
+                        <th width="170">Weight Used</th>
+                        <th width="170">Exercise 3</th>
+                        <th width="170">Weight Used</th>
+                        <th width="170">Exercise 4</th>
+                        <th width="170">Weight Used</th>
+                        <th width="170">Date of Workout Completion</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{lift.user_id}</td>
+                        <td>{lift.workout_name}</td>
+                        <td>{lift.exercise_1}</td>
+                        <td>{editMode ?
+                            <div>
+                                <input
+                                    type="text"
+                                    value={editWorkout.weight_used_1}
+                                    onChange={(event) => handleChange(event, 'weight_used_1')} />
+                            </div>
+                            :
+
+                            <h5><td>{lift.weight_used_1} </td></h5>
+                        }</td>
+                        <td>{lift.exercise_2}</td>
+                        <td>{editMode ?
+                            <div>
+                                <input
+                                    type="text"
+                                    value={editWorkout.weight_used_2}
+                                    onChange={(event) => handleChange(event, 'weight_used_2')} />
+                            </div>
+                            :
+
+                            <h5><td>{lift.weight_used_2} </td></h5>
+                        }</td>
+                        <td>{lift.exercise_3}</td>
+                        <td>{editMode ?
+                            <div>
+                                <input
+                                    type="text"
+                                    value={editWorkout.weight_used_3}
+                                    onChange={(event) => handleChange(event, 'weight_used_3')} />
+                            </div>
+                            :
+
+                            <h5><td>{lift.weight_used_3} </td></h5>
+                        }</td>
+                        <td>{lift.exercise_4}</td>
+                        <td>{editMode ?
+                            <div>
+                                <input
+                                    type="text"
+                                    value={editWorkout.weight_used_4}
+                                    onChange={(event) => handleChange(event, 'weight_used_4')} />
+                            </div>
+                            :
+
+                            <h5><td>{lift.weight_used_4} </td></h5>
+                        }</td>
+                        <td>{lift.date}</td>
+
+                    </tr>
 
 
-                 <h5><th>Exercise 1: {lift.exercise_1} </th></h5>
-
-
-                  <div>{editMode ?
-                    <div>
-                        <input
-                            type="text"
-                            value={editWorkout.weight_used_1}
-                            onChange={(event) => handleChange(event, 'weight_used_1')} />
-                    </div>
-                    :
-                    
-                        <h5><th>Weight Used: {lift.weight_used_1} </th></h5>
-                    }
-                </div> 
-
-               
-                <h5><th>Exercise 2: {lift.exercise_2} </th></h5>
-                
-                  <div>{editMode ?
-                    <div>
-                        <input
-                            type="text"
-                            value={editWorkout.weight_used_2}
-                            onChange={(event) => handleChange(event, 'weight_used_2')} />
-                    </div>
-                    :
-                    <div>
-                        <h5><th>Weight Used: {lift.weight_used_2} </th></h5>
-                    </div>}  </div> 
-                <div>
-                <h5><th>Exercise 3: {lift.exercise_3} </th></h5>
-                </div>
-                <div>  <div>{editMode ?
-                    <div>
-                        <input
-                            type="text"
-                            value={editWorkout.weight_used_3}
-                            onChange={(event) => handleChange(event, 'weight_used_3')} />
-                    </div>
-                    :
-                    <div>
-                        <h5><th>Weight Used: {lift.weight_used_3} </th></h5>
-                    </div>}   </div> </div>
-                <div>
-                <h5><th>Exercise 4: {lift.exercise_4}</th></h5>
-                </div>
-                <div>  <div>{editMode ?
-                    <div>
-                        <input
-                            type="text"
-                            value={editWorkout.weight_used_4}
-                            onChange={(event) => handleChange(event, 'weight_used_4')} />
-                    </div>
-                    :
-                    <div>
-                       <h5><th>Weight Used: {lift.weight_used_4} </th></h5>
-                    </div>}   </div> </div>
-
-
-                <div> <h6><th>Date of Workout Completion: {lift.date}</th></h6>
-
-                </div>
-                {/* <div><h4>___________________________________________</h4></div> */}
+                </tbody>
             </Table>
+
+
             <ButtonGroup aria-label="Basic example"> <Button variant="danger" className="rounded-pill" size="md" style={{ padding: 5, margin: 0 }} onClick={(event) => dispatch({ type: 'DELETE_WORKOUT', payload: lift.id })}>Delete Workout From History</Button></ButtonGroup>
             {editMode ? <ButtonGroup aria-label="Basic example"> <Button variant="primary" className="rounded-pill" size="md" style={{ padding: 5, margin: 7 }} onClick={handleSave}>Save Edit</Button></ButtonGroup> : <ButtonGroup aria-label="Basic example"> <Button variant="primary" className="rounded-pill" size="md" style={{ padding: 5, margin: 7 }} onClick={handleEdit}> Edit Weight Used</Button></ButtonGroup>}
         </>
@@ -115,5 +122,4 @@ function EditWorkout({ lift }) {
 }
 
 export default EditWorkout;
-
 
