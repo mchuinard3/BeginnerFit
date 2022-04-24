@@ -114,8 +114,8 @@ function EditWorkout({ lift }) {
             </Table>
 
 
-            <ButtonGroup aria-label="Basic example"> <Button variant="danger" className="rounded-pill" size="md" style={{ padding: 5, margin: 0 }} onClick={(event) => dispatch({ type: 'DELETE_WORKOUT', payload: lift.id })}>Delete Workout From History</Button></ButtonGroup>
-            {editMode ? <ButtonGroup aria-label="Basic example"> <Button variant="primary" className="rounded-pill" size="md" style={{ padding: 5, margin: 7 }} onClick={handleSave}>Save Edit</Button></ButtonGroup> : <ButtonGroup aria-label="Basic example"> <Button variant="primary" className="rounded-pill" size="md" style={{ padding: 5, margin: 7 }} onClick={handleEdit}> Edit Weight Used</Button></ButtonGroup>}
+            <ButtonGroup aria-label="Basic example"> <Button variant="danger" className="rounded-pill" size="md" style={{ padding: 5, margin: 0 }} onClick={(event) => dispatch({ type: 'DELETE_WORKOUT', payload: lift.id })}>Delete Workout</Button></ButtonGroup>
+            {editMode ? <ButtonGroup aria-label="Basic example"> <Button variant="light" className="rounded-pill" size="md" style={{ padding: 5, margin: 7 }} onClick={handleSave}>Save Edit</Button></ButtonGroup> : <ButtonGroup aria-label="Basic example"> <Button variant="light" className="rounded-pill" size="md" style={{ padding: 5, margin: 7 }} onClick={handleEdit}> Edit Weight Used</Button></ButtonGroup>}
         </>
 
     )

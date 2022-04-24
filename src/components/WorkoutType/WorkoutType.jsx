@@ -132,7 +132,7 @@ function WorkoutType() {
       </div>
 
       <Col style={{ fontSize: 25, padding: 4 }}>Click I'm Done Button When Entire Workout is Complete:</Col>
-      <ButtonGroup aria-label="Basic example"><Button variant="light" className="rounded-pill" size="lg" style={{ padding: 10, margin: 17, width: 120 }} onClick={addWorkout} >I'm Done</Button></ButtonGroup>
+      <ButtonGroup aria-label="Basic example"><Button variant="light" className="rounded-pill" size="lg" style={{ padding: 5, margin: 17, width: 150 }} onClick={addWorkout} >I'm Done</Button></ButtonGroup>
     </main>
   )
 }
