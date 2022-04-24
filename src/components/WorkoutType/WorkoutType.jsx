@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import ReactPlayer from 'react-player';
 import swal from 'sweetalert';
 import { useHistory } from 'react-router-dom';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 
 function WorkoutType() {
 
@@ -48,42 +50,81 @@ function WorkoutType() {
 
   return (
     <main className="center">
-      <h2>{singleWorkout.workout_name}</h2>
-      <div><h4>___________________________________________</h4></div>
-      <div> <h3>Exercise 1: </h3>
-        <h3>{singleWorkout.exercise_1}</h3>
-       <div className="video"><ReactPlayer url={singleWorkout.video_1}  /> </div>
-        <h3> Complete 4 Sets of 10 Reps </h3>
-        <h3>Sets Completed: <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /></h3>
-        <h3>Weight Used:<input type="text" onChange={(event) => setWeightOne(event.target.value)} /> </h3>
-        <div><h4>___________________________________________</h4></div>
+     <Col style={{ fontSize: 40 }}> {singleWorkout.workout_name}</Col>
+      <div>
+        <h4>___________________________________________</h4>
+      </div>
+      <div>
+      <Col style={{ fontSize: 25 }}>Exercise 1: </Col>
+      <Col style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_1}</Col>
+        <div className="video">
+          <ReactPlayer url={singleWorkout.video_1} />
+        </div>
+        <Col style={{ fontSize: 25, padding: 4 }}> Complete 4 Sets of 10 Reps </Col>
+        <Col style={{ fontSize: 25 }}>Sets Completed:
+          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
+          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
+          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
+          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
+          </Col>
+          <Col style={{ fontSize: 25 }}>Weight Used:
+          <input type="text" className="border rounded" size="7" style={{ padding: 10, margin: 5, height: 25, width: 120 }} onChange={(event) => setWeightOne(event.target.value)} />
+          </Col>
+        <div>
+          <h4>___________________________________________</h4>
+        </div>
       </div>
 
-      <div> <h3>Exercise 2: </h3>
+      <div>
+        <h3>Exercise 2: </h3>
         <h3>{singleWorkout.exercise_2}</h3>
-        <div className="video"><ReactPlayer url={singleWorkout.video_2}  /> </div>
+        <div className="video"><ReactPlayer url={singleWorkout.video_2} />
+        </div>
         <h3> Complete 4 Sets of 10 Reps </h3>
-        <h3>Sets Completed: <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /></h3>
+        <h3>Sets Completed:
+          <input type="checkbox" />
+          <input type="checkbox" />
+          <input type="checkbox" />
+          <input type="checkbox" /></h3>
         <h3>Weight Used:<input type="text" onChange={(event) => setWeightTwo(event.target.value)} /> </h3>
-        <div><h4>___________________________________________</h4></div>
+        <div>
+          <h4>___________________________________________</h4>
+        </div>
       </div>
 
-      <div> <h3>Exercise 3: </h3>
+      <div>
+        <h3>Exercise 3: </h3>
         <h3>{singleWorkout.exercise_3}</h3>
-        <div className="video"><ReactPlayer url={singleWorkout.video_3}  /></div>
+        <div className="video">
+          <ReactPlayer url={singleWorkout.video_3} />
+        </div>
         <h3> Complete 4 Sets of 10 Reps </h3>
-        <h3>Sets Completed: <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /></h3>
+        <h3>Sets Completed:
+          <input type="checkbox" />
+          <input type="checkbox" />
+          <input type="checkbox" />
+          <input type="checkbox" /></h3>
         <h3>Weight Used:<input type="text" onChange={(event) => setWeightThree(event.target.value)} /> </h3>
-        <div><h4>___________________________________________</h4></div>
+        <div>
+          <h4>___________________________________________</h4>
+        </div>
       </div>
 
       <div> <h3>Exercise 4: </h3>
         <h3>{singleWorkout.exercise_4}</h3>
-        <div className="video"><ReactPlayer url={singleWorkout.video_4}  /> </div>
+        <div className="video">
+          <ReactPlayer url={singleWorkout.video_4} />
+        </div>
         <h3> Complete 4 Sets of 10 Reps </h3>
-        <h3>Sets Completed: <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /> <input type="checkbox" /></h3>
+        <h3>Sets Completed:
+          <input type="checkbox" />
+          <input type="checkbox" />
+          <input type="checkbox" />
+          <input type="checkbox" /></h3>
         <h3>Weight Used:<input type="text" onChange={(event) => setWeightFour(event.target.value)} /> </h3>
-        <div><h4>___________________________________________</h4></div>
+        <div>
+          <h4>___________________________________________</h4>
+        </div>
       </div>
       <h3>Enter Workout Date:</h3>
       <div>
