@@ -97,9 +97,14 @@ width: 500px;
 }
 
 .btn:hover {
-  background-color: #008183;
+  background-color: silver;
   text-decoration: none;
+  cursor: pointer;
+  
+  
 }
+
+
 
 
 .btn_asLink {
