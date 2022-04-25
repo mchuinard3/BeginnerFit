@@ -5,6 +5,8 @@ import swal from 'sweetalert';
 import { useHistory } from 'react-router-dom';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { Button, Container, Row, Col } from 'react-bootstrap';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 function WorkoutType() {
 

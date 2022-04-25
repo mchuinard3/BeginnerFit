@@ -37,7 +37,7 @@ function* getWorkoutHistory() {
 function* postWorkoutHistory(action) {
     try {
         yield axios.post('/api/workoutType', action.payload)
-        yield put({ type: 'GET_WORKOUT' });
+        yield put({ type: 'GET_WORKOUT_HISTORY' });
 
     } catch (error) {
         console.log(error);
