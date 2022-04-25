@@ -10,6 +10,8 @@ import withReactContent from 'sweetalert2-react-content'
 
 function WorkoutType() {
 
+  const MySwal = withReactContent(Swal);
+
   const [value, setDate] = useState('');
   const history = useHistory();
 
@@ -23,26 +25,6 @@ function WorkoutType() {
   useEffect(() => {
     dispatch({ type: 'GET_WORKOUT' });
   }, []);
-
-  // useEffect(() => {
-  //   singleWorkout.workout_name
-  // }, []);
-
-  // useEffect(() => {
-  //   singleWorkout.video_1
-  // }, []);
-
-  // useEffect(() => {
-  //   singleWorkout.video_2
-  // }, []);
-
-  // useEffect(() => {
-  //   singleWorkout.video_3
-  // }, []);
-
-  // useEffect(() => {
-  //   singleWorkout.video_4
-  // }, []);
 
   const singleWorkout = useSelector(store => store.singleWorkoutReducer);
 
@@ -67,7 +49,7 @@ function WorkoutType() {
       
     })
     history.push(`/workoutHistory`)
-    swal(`Way to get it done ${user.username}, check out your workout history!`);
+    MySwal.fire(`Way to get it done ${user.username}, check out your workout history!`);
    
 
   }

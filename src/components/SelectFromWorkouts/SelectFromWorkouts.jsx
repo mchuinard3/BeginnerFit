@@ -7,11 +7,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { Button, Container, Row, Col } from 'react-bootstrap';
-
-
-
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
 function SelectFromWorkouts() {
+
+  const MySwal = withReactContent(Swal);
 
   const user = useSelector((store) => store.user);
 
@@ -26,6 +27,7 @@ function SelectFromWorkouts() {
   const handleWorkout = (id) => {
     dispatch({ type: 'GET_SINGLE_WORKOUT', payload: id });
     history.push('/workoutType');
+    MySwal.fire(`Have a good workout ${user.username}!`);
 
   }
 
