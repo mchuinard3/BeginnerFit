@@ -6,8 +6,11 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import moment from 'moment';
 
 function EditWorkout({ lift }) {
+
+    const day = moment(lift.date).format("dddd, MMMM Do YYYY");
 
     const [editMode, setEditMode] = useState(false);
     const editWorkout = useSelector(store => store.editWorkoutReducer);
@@ -108,7 +111,7 @@ function EditWorkout({ lift }) {
 
                             <td>{lift.weight_used_4} </td>
                         }</td>
-                        <td>{lift.date}</td>
+                        <td>{day}</td>
 
                     </tr>
 
