@@ -46,8 +46,15 @@ function SelectFromWorkouts() {
       <ul>
         {workout.map((exercise, i) => {
           return (
-            <button
-              key={i} onClick={(event) => handleWorkout(exercise.id)}>{exercise.workout_name}</button>);
+            <ButtonGroup
+              aria-label="Basic example">
+              <Button
+                variant="light"
+                className="rounded-pill"
+                size="md"
+                style={{ padding: 5, margin: 7 }}
+                key={i} onClick={(event) => handleWorkout(exercise.id)}>{exercise.workout_name}   </Button>
+            </ButtonGroup>);
         })}
       </ul>
       <LogOutButton
