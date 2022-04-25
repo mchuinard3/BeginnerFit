@@ -126,13 +126,13 @@ function WorkoutType() {
           <h4>___________________________________________</h4>
         </div>
       </div>
-      <h3>Enter Workout Date:</h3>
+      <h3>Enter Date of Workout Completion:</h3>
       <div>
         <input type="date" className="border rounded" size="7" style={{ padding: 10, margin: 5, height: 25, width: 150 }} onChange={(event) => setDate(event.target.value)} />
       </div>
 
-      <Col style={{ fontSize: 25, padding: 4 }}>Click I'm Done Button When Entire Workout is Complete:</Col>
-      <ButtonGroup aria-label="Basic example"><Button variant="light" className="rounded-pill" size="lg" style={{ padding: 5, margin: 17, width: 150 }} onClick={addWorkout} >I'm Done</Button></ButtonGroup>
+      <Col style={{ fontSize: 25, padding: 4 }}>Click I'm Done Button When Workout is Complete:</Col>
+      <ButtonGroup aria-label="Basic example"><Button variant="success" className="rounded-pill" size="lg" style={{ padding: 5, margin: 17, width: 150 }} onClick={addWorkout} >I'm Done</Button></ButtonGroup>
     </main>
   )
 }
