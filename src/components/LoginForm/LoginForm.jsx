@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 
 function LoginForm() {
   const [username, setUsername] = useState('');
@@ -38,6 +40,8 @@ function LoginForm() {
           <input
             type="text"
             name="username"
+            className="border rounded"
+            size="15"
             required
             value={username}
             onChange={(event) => setUsername(event.target.value)}
@@ -50,6 +54,8 @@ function LoginForm() {
           <input
             type="password"
             name="password"
+            className="border rounded"
+            size="15"
             required
             value={password}
             onChange={(event) => setPassword(event.target.value)}
@@ -57,7 +63,8 @@ function LoginForm() {
         </label>
       </div>
       <div>
-        <input className="btn" type="submit" name="submit" value="Log In" />
+        <input className="button1" type="submit" name="submit" value="Log In" />
+
       </div>
     </form>
   );

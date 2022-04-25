@@ -31,6 +31,8 @@ function RegisterForm() {
         <label htmlFor="username">
           Username:
           <input
+            className="border rounded"
+            size="15"
             type="text"
             name="username"
             value={username}
@@ -43,6 +45,8 @@ function RegisterForm() {
         <label htmlFor="password">
           Password:
           <input
+            className="border rounded"
+            size="15"
             type="password"
             name="password"
             value={password}
@@ -52,7 +56,7 @@ function RegisterForm() {
         </label>
       </div>
       <div>
-        <input className="btn" type="submit" name="submit" value="Register" />
+        <input className="button1" type="submit" name="submit" value="Register" />
       </div>
     </form>
   );
