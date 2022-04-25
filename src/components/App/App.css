@@ -37,7 +37,6 @@ position: relative;
 }
 
 .align {
-  
   padding: 5px;
   text-align: center;
   width: 700px;
@@ -64,11 +63,7 @@ display: flex;
 text-align: center;
 position: relative;
 width: 500px;
-
-
 }
-
-
 
 .container {
   padding: 20px;
@@ -103,12 +98,7 @@ width: 500px;
   background-color: silver;
   text-decoration: none;
   cursor: pointer;
-  
-  
 }
-
-
-
 
 .btn_asLink {
   padding: 0;
@@ -126,8 +116,6 @@ width: 500px;
   color: #008183;
 }
 
-
-
 .alert {
   box-sizing: border-box;
   padding: 15px 10px;
@@ -138,8 +126,6 @@ width: 500px;
   color: #e01616;
   font-size: 0.8rem;
 }
-
-
 
 .formPanel {
   box-sizing: border-box;
