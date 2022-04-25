@@ -48,7 +48,7 @@ function EditWorkout({ lift }) {
             <h5 className="centerTitle">Workout History</h5>
             <Table variant="dark" size="lg" padding="sm" className="alignTable">
                 <thead>
-                    <tr>
+                    <tr >
                         <th width="170">User ID</th>
                         <th width="170">Workout Name</th>
                         <th width="170">Exercise 1</th>
@@ -69,51 +69,51 @@ function EditWorkout({ lift }) {
                         <td>{lift.workout_name}</td>
                         <td>{lift.exercise_1}</td>
                         <td>{editMode ?
-                            <div>
-                                <input
-                                    type="text"
-                                    value={editWorkout.weight_used_1}
-                                    onChange={(event) => handleChange(event, 'weight_used_1')} />
-                            </div>
+
+                            <input
+                                type="text"
+                                value={editWorkout.weight_used_1}
+                                onChange={(event) => handleChange(event, 'weight_used_1')} />
+
                             :
 
-                            <td>{lift.weight_used_1} </td>
+                            <div>{lift.weight_used_1} </div>
                         }</td>
                         <td>{lift.exercise_2}</td>
                         <td>{editMode ?
-                            <div>
-                                <input
-                                    type="text"
-                                    value={editWorkout.weight_used_2}
-                                    onChange={(event) => handleChange(event, 'weight_used_2')} />
-                            </div>
+
+                            <input
+                                type="text"
+                                value={editWorkout.weight_used_2}
+                                onChange={(event) => handleChange(event, 'weight_used_2')} />
+
                             :
 
-                            <td>{lift.weight_used_2} </td>
+                            <div>{lift.weight_used_2} </div>
                         }</td>
                         <td>{lift.exercise_3}</td>
                         <td>{editMode ?
-                            <div>
-                                <input
-                                    type="text"
-                                    value={editWorkout.weight_used_3}
-                                    onChange={(event) => handleChange(event, 'weight_used_3')} />
-                            </div>
+
+                            <input
+                                type="text"
+                                value={editWorkout.weight_used_3}
+                                onChange={(event) => handleChange(event, 'weight_used_3')} />
+
                             :
 
-                            <td>{lift.weight_used_3} </td>
+                            <div>{lift.weight_used_3} </div>
                         }</td>
                         <td>{lift.exercise_4}</td>
                         <td>{editMode ?
-                            <div>
-                                <input
-                                    type="text"
-                                    value={editWorkout.weight_used_4}
-                                    onChange={(event) => handleChange(event, 'weight_used_4')} />
-                            </div>
+
+                            <input
+                                type="text"
+                                value={editWorkout.weight_used_4}
+                                onChange={(event) => handleChange(event, 'weight_used_4')} />
+
                             :
 
-                            <td>{lift.weight_used_4} </td>
+                            <div>{lift.weight_used_4} </div>
                         }</td>
                         <td>{day}</td>
 
