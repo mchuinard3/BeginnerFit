@@ -149,7 +149,13 @@ width: 500px;
   box-shadow: 0 1px 2px black;
   color: black;
   text-align: center;
-  margin-left: 518px;
+  margin-left: auto;
+margin-right: auto;
+
+
+position: relative;
+
+  /* margin-left: 518px; */
 }
 
 input {
