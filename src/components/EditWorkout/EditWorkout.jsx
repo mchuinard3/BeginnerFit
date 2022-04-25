@@ -8,6 +8,10 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import moment from 'moment';
 
+/*
+This component contains the user workout 
+history table.
+*/
 function EditWorkout({ lift }) {
 
     const day = moment(lift.date).format("dddd, MMMM Do YYYY");

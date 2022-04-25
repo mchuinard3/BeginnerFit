@@ -10,6 +10,14 @@ import { Button, Container, Row, Col } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
+/*
+This component contains buttons labeled with
+each of the different workout options for 
+the user to choose from. Once the button 
+is clicked on, it will take the user to
+the WorkoutType page, and display the specific
+workout.
+*/
 function SelectFromWorkouts() {
 
   const MySwal = withReactContent(Swal);

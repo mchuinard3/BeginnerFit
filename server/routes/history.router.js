@@ -27,7 +27,7 @@ router.delete('/:id', rejectUnauthenticated, (req, res) => {
         });
 });
 
-router.put('/', (req, res) => {
+router.put('/', rejectUnauthenticated, (req, res) => {
     const updatedWeight = req.body;
     const queryText = `UPDATE "history"
     SET "weight_used_1" = $1, 

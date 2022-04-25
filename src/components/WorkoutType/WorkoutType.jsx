@@ -8,6 +8,10 @@ import { Button, Container, Row, Col } from 'react-bootstrap';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
+/*
+This component displays each workout selected 
+from the previous page to the DOM.
+*/
 function WorkoutType() {
 
   const MySwal = withReactContent(Swal);
