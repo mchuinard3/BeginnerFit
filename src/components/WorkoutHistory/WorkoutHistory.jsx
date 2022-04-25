@@ -12,8 +12,6 @@ function WorkoutHistory({ }) {
     dispatch({ type: 'GET_WORKOUT_HISTORY' });
   }, []);
 
-  
-
   // useEffect(() => {
   //   dispatch({ type: 'GET_WORKOUT' });
   // }, []);
