@@ -22,6 +22,26 @@ function WorkoutType() {
     dispatch({ type: 'GET_WORKOUT' });
   }, []);
 
+  // useEffect(() => {
+  //   singleWorkout.workout_name
+  // }, []);
+
+  // useEffect(() => {
+  //   singleWorkout.video_1
+  // }, []);
+
+  // useEffect(() => {
+  //   singleWorkout.video_2
+  // }, []);
+
+  // useEffect(() => {
+  //   singleWorkout.video_3
+  // }, []);
+
+  // useEffect(() => {
+  //   singleWorkout.video_4
+  // }, []);
+
   const singleWorkout = useSelector(store => store.singleWorkoutReducer);
 
   const dispatch = useDispatch();
@@ -42,33 +62,64 @@ function WorkoutType() {
         exercise_4: singleWorkout.exercise_4,
         user_id: user.id
       }
+      
     })
     history.push(`/workoutHistory`)
     swal(`Way to get it done ${user.username}, check out your workout history!`);
+   
 
   }
 
   return (
-    <main className="center">
-      <Col style={{ fontSize: 35 }}> {singleWorkout.workout_name}</Col>
+    <main
+      className="center">
+      <Col
+        style={{ fontSize: 35 }}> {singleWorkout.workout_name}
+      </Col>
       <div>
         <h4>___________________________________________</h4>
       </div>
       <div>
-        <Col style={{ fontSize: 25 }}>Exercise 1: </Col>
-        <Col style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_1}</Col>
-        <div className="video">
-          <ReactPlayer url={singleWorkout.video_1} />
-        </div>
-        <Col style={{ fontSize: 25, padding: 4 }}> Complete 4 Sets of 10 Reps </Col>
-        <Col style={{ fontSize: 25 }}>Sets Completed:
-          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
-          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
-          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
-          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
+        <Col
+          style={{ fontSize: 25 }}>Exercise 1:
         </Col>
-        <Col style={{ fontSize: 25 }}>Weight Used:
-          <input type="text" className="border rounded" size="7" style={{ padding: 10, margin: 5, height: 25, width: 150 }} onChange={(event) => setWeightOne(event.target.value)} />
+        <Col
+          style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_1}
+        </Col>
+        <div
+          className="video">
+          <ReactPlayer
+            url={singleWorkout.video_1} />
+        </div>
+        <Col
+          style={{ fontSize: 25, padding: 4 }}> Complete 4 Sets of 10 Reps
+        </Col>
+        <Col style={{ fontSize: 25 }}>Sets Completed:
+          <input
+            type="checkbox"
+            className="border rounded"
+            style={{ width: 14, height: 14 }} />
+          <input
+            type="checkbox"
+            className="border rounded"
+            style={{ width: 14, height: 14 }} />
+          <input
+            type="checkbox"
+            className="border rounded"
+            style={{ width: 14, height: 14 }} />
+          <input
+            type="checkbox"
+            className="border rounded"
+            style={{ width: 14, height: 14 }} />
+        </Col>
+        <Col
+          style={{ fontSize: 25 }}>Weight Used:
+          <input
+            type="text"
+            className="border rounded"
+            size="7"
+            style={{ padding: 10, margin: 5, height: 25, width: 150 }}
+            onChange={(event) => setWeightOne(event.target.value)} />
         </Col>
         <div>
           <h4>___________________________________________</h4>
@@ -76,63 +127,166 @@ function WorkoutType() {
       </div>
 
       <div>
-        <Col style={{ fontSize: 25 }}>Exercise 2: </Col>
-        <Col style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_2}</Col>
-        <div className="video"><ReactPlayer url={singleWorkout.video_2} />
+        <Col
+          style={{ fontSize: 25 }}>Exercise 2:
+        </Col>
+        <Col
+          style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_2}
+        </Col>
+        <div
+          className="video">
+          <ReactPlayer
+            url={singleWorkout.video_2} />
         </div>
-        <Col style={{ fontSize: 25, padding: 4 }}> Complete 4 Sets of 10 Reps </Col>
-        <Col style={{ fontSize: 25 }}>Sets Completed:
-          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
-          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
-          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
-          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} /></Col>
-        <Col style={{ fontSize: 25 }}>Weight Used:<input type="text" className="border rounded" size="7" style={{ padding: 10, margin: 5, height: 25, width: 150 }} onChange={(event) => setWeightTwo(event.target.value)} /> </Col>
+        <Col
+          style={{ fontSize: 25, padding: 4 }}> Complete 4 Sets of 10 Reps
+        </Col>
+        <Col
+          style={{ fontSize: 25 }}>Sets Completed:
+          <input
+            type="checkbox"
+            className="border rounded"
+            style={{ width: 14, height: 14 }} />
+          <input
+            type="checkbox"
+            className="border rounded"
+            style={{ width: 14, height: 14 }} />
+          <input
+            type="checkbox"
+            className="border rounded"
+            style={{ width: 14, height: 14 }} />
+          <input
+            type="checkbox"
+            className="border rounded"
+            style={{ width: 14, height: 14 }} />
+        </Col>
+        <Col
+          style={{ fontSize: 25 }}>Weight Used:<input
+            type="text"
+            className="border rounded"
+            size="7"
+            style={{ padding: 10, margin: 5, height: 25, width: 150 }}
+            onChange={(event) => setWeightTwo(event.target.value)} />
+        </Col>
         <div>
           <h4>___________________________________________</h4>
         </div>
       </div>
 
       <div>
-        <Col style={{ fontSize: 25 }}>Exercise 3: </Col>
-        <Col style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_3}</Col>
-        <div className="video">
-          <ReactPlayer url={singleWorkout.video_3} />
+        <Col
+          style={{ fontSize: 25 }}>Exercise 3:
+        </Col>
+        <Col
+          style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_3}
+        </Col>
+        <div
+          className="video">
+          <ReactPlayer
+            url={singleWorkout.video_3} />
         </div>
-        <Col style={{ fontSize: 25, padding: 4 }}> Complete 4 Sets of 10 Reps </Col>
-        <Col style={{ fontSize: 25 }}>Sets Completed:
-          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
-          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
-          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
-          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} /></Col>
-        <Col style={{ fontSize: 25 }}>Weight Used:<input type="text" className="border rounded" size="7" style={{ padding: 10, margin: 5, height: 25, width: 150 }} onChange={(event) => setWeightThree(event.target.value)} /></Col>
+        <Col
+          style={{ fontSize: 25, padding: 4 }}> Complete 4 Sets of 10 Reps
+        </Col>
+        <Col
+          style={{ fontSize: 25 }}>Sets Completed:
+          <input
+            type="checkbox"
+            className="border rounded"
+            style={{ width: 14, height: 14 }} />
+          <input
+            type="checkbox"
+            className="border rounded"
+            style={{ width: 14, height: 14 }} />
+          <input
+            type="checkbox"
+            className="border rounded"
+            style={{ width: 14, height: 14 }} />
+          <input
+            type="checkbox"
+            className="border rounded"
+            style={{ width: 14, height: 14 }} />
+        </Col>
+        <Col
+          style={{ fontSize: 25 }}>Weight Used:<input
+            type="text"
+            className="border rounded"
+            size="7"
+            style={{ padding: 10, margin: 5, height: 25, width: 150 }}
+            onChange={(event) => setWeightThree(event.target.value)} />
+        </Col>
         <div>
           <h4>___________________________________________</h4>
         </div>
       </div>
 
-      <div> <Col style={{ fontSize: 25 }}>Exercise 4: </Col>
-        <Col style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_4}</Col>
-        <div className="video">
-          <ReactPlayer url={singleWorkout.video_4} />
+      <div> <Col
+        style={{ fontSize: 25 }}>Exercise 4:
+      </Col>
+        <Col
+          style={{ fontSize: 25, padding: 4 }}>{singleWorkout.exercise_4}
+        </Col>
+        <div
+          className="video">
+          <ReactPlayer
+            url={singleWorkout.video_4} />
         </div>
-        <Col style={{ fontSize: 25, padding: 4 }}> Complete 4 Sets of 10 Reps </Col>
+        <Col
+          style={{ fontSize: 25, padding: 4 }}> Complete 4 Sets of 10 Reps
+        </Col>
         <h3>Sets Completed:
-          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
-          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
-          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} />
-          <input type="checkbox" className="border rounded" style={{ width: 14, height: 14 }} /></h3>
-        <Col style={{ fontSize: 25 }}>Weight Used:<input type="text" className="border rounded" size="7" style={{ padding: 10, margin: 5, height: 25, width: 150 }} onChange={(event) => setWeightFour(event.target.value)} /> </Col>
+          <input
+            type="checkbox"
+            className="border rounded"
+            style={{ width: 14, height: 14 }} />
+          <input
+            type="checkbox"
+            className="border rounded"
+            style={{ width: 14, height: 14 }} />
+          <input
+            type="checkbox"
+            className="border rounded"
+            style={{ width: 14, height: 14 }} />
+          <input
+            type="checkbox"
+            className="border rounded"
+            style={{ width: 14, height: 14 }} />
+        </h3>
+        <Col
+          style={{ fontSize: 25 }}>Weight Used:<input
+            type="text"
+            className="border rounded"
+            size="7"
+            style={{ padding: 10, margin: 5, height: 25, width: 150 }}
+            onChange={(event) => setWeightFour(event.target.value)} />
+        </Col>
         <div>
           <h4>___________________________________________</h4>
         </div>
       </div>
       <h3>Enter Date of Workout Completion:</h3>
       <div>
-        <input type="date" className="border rounded" size="7" style={{ padding: 10, margin: 5, height: 25, width: 150 }} onChange={(event) => setDate(event.target.value)} />
+        <input
+          type="date"
+          className="border rounded"
+          size="7"
+          style={{ padding: 10, margin: 5, height: 25, width: 150 }}
+          onChange={(event) => setDate(event.target.value)} />
       </div>
 
-      <Col style={{ fontSize: 25, padding: 4 }}>Click I'm Done Button When Workout is Complete:</Col>
-      <ButtonGroup aria-label="Basic example"><Button variant="success" className="rounded-pill" size="lg" style={{ padding: 5, margin: 17, width: 150 }} onClick={addWorkout} >I'm Done</Button></ButtonGroup>
+      <Col
+        style={{ fontSize: 25, padding: 4 }}>Click I'm Done Button When Workout is Complete:
+      </Col>
+      <ButtonGroup
+        aria-label="Basic example">
+        <Button
+          variant="success"
+          className="rounded-pill"
+          size="lg"
+          style={{ padding: 5, margin: 17, width: 150 }}
+          onClick={addWorkout} >I'm Done
+        </Button>
+      </ButtonGroup>
     </main>
   )
 }

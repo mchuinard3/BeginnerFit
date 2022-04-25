@@ -32,14 +32,12 @@ function EditWorkout({ lift }) {
         setEditMode(!editMode);
     }
 
-
-
     return (
 
         <>
 
             <h5 className="centerTitle">Workout History</h5>
-            <Table stripped bordered hover variant="dark" size="lg" padding="sm" className="alignTable">
+            <Table variant="dark" size="lg" padding="sm" className="alignTable">
                 <thead>
                     <tr>
                         <th width="170">User ID</th>
@@ -117,8 +115,39 @@ function EditWorkout({ lift }) {
             </Table>
 
 
-            <div className="centerButton"><ButtonGroup aria-label="Basic example"> <Button variant="danger" className="rounded-pill" size="md" style={{ padding: 5, margin: 0 }} onClick={(event) => dispatch({ type: 'DELETE_WORKOUT', payload: lift.id })}>Delete Workout</Button></ButtonGroup>
-                {editMode ? <ButtonGroup aria-label="Basic example"> <Button variant="light" className="rounded-pill" size="md" style={{ padding: 5, margin: 7 }} onClick={handleSave}>Save Edits</Button></ButtonGroup> : <ButtonGroup aria-label="Basic example"> <Button variant="light" className="rounded-pill" size="md" style={{ padding: 5, margin: 7 }} onClick={handleEdit}> Edit Weight Used</Button></ButtonGroup>}
+            <div
+                className="centerButton">
+                <ButtonGroup
+                    aria-label="Basic example">
+                    <Button
+                        variant="danger"
+                        className="rounded-pill"
+                        size="md"
+                        style={{ padding: 5, margin: 0 }}
+                        onClick={(event) => dispatch({ type: 'DELETE_WORKOUT', payload: lift.id })}>Delete Workout
+                    </Button>
+                </ButtonGroup>
+                {editMode ?
+                    <ButtonGroup
+                        aria-label="Basic example">
+                        <Button
+                            variant="light"
+                            className="rounded-pill"
+                            size="md"
+                            style={{ padding: 5, margin: 7 }}
+                            onClick={handleSave}>Save Edits
+                        </Button>
+                    </ButtonGroup> :
+                    <ButtonGroup
+                        aria-label="Basic example">
+                        <Button
+                            variant="light"
+                            className="rounded-pill"
+                            size="md"
+                            style={{ padding: 5, margin: 7 }}
+                            onClick={handleEdit}> Edit Weight Used
+                        </Button>
+                    </ButtonGroup>}
             </div>
         </>
 

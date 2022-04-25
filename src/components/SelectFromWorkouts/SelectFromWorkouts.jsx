@@ -30,20 +30,28 @@ function SelectFromWorkouts() {
   }
 
   return (
-    
+
     <div className="center">
-     
-      <Col style={{ fontSize: 25, padding: 4 }}>Welcome, {user.username}!</Col>
-      <Col style={{ fontSize: 25, padding: 4 }}>Your ID is: {user.id}</Col>
-      <Col style={{ fontSize: 25, padding: 4 }}>Select From Workouts</Col>
-     
+
+      <Col
+        style={{ fontSize: 25, padding: 4 }}>Welcome, {user.username}!
+      </Col>
+      <Col
+        style={{ fontSize: 25, padding: 4 }}>Your ID is: {user.id}
+      </Col>
+      <Col
+        style={{ fontSize: 25, padding: 4 }}>Select From Workouts
+      </Col>
+
       <ul>
-        {workout.map((exercise) => {
+        {workout.map((exercise, i) => {
           return (
-            <button onClick={(event) => handleWorkout(exercise.id)}>{exercise.workout_name}</button>);
+            <button
+              key={i} onClick={(event) => handleWorkout(exercise.id)}>{exercise.workout_name}</button>);
         })}
       </ul>
-      <LogOutButton className="btn" />
+      <LogOutButton
+        className="btn" />
     </div>
   );
 }

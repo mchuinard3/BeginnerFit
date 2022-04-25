@@ -5,11 +5,18 @@ import { useDispatch } from 'react-redux'; import EditWorkout from '../EditWorko
 function WorkoutHistory({ }) {
 
   const workoutHistory = useSelector(store => store.workoutHistoryReducer);
+  console.log(workoutHistory);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch({ type: 'GET_WORKOUT_HISTORY' });
   }, []);
+
+  
+
+  // useEffect(() => {
+  //   dispatch({ type: 'GET_WORKOUT' });
+  // }, []);
 
   return (
 
