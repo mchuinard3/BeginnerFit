@@ -52,7 +52,7 @@ function SelectFromWorkouts() {
                 variant="light"
                 className="rounded-pill"
                 size="md"
-                style={{ padding: 5, margin: 7 }}
+                style={{ padding: 5, margin: 7, width: 180, height: 40 }}
                 key={i} onClick={(event) => handleWorkout(exercise.id)}>{exercise.workout_name}   </Button>
             </ButtonGroup>);
         })}
