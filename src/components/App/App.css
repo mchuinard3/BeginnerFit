@@ -18,6 +18,12 @@ img {
   max-width: 100%;
 }
 
+.app {
+  width: 400px;
+  padding: 40px;
+  margin-left: 515px;
+}
+
 .center {
   text-align: center;
   margin-top: 15px;

@@ -23,9 +23,9 @@ function ProgressBar() {
     return (
       <div className="app">
        
-        <div style={{ width: 400, marginLeft: 520, padding: 50 }}>
+        {/* <div style={{ width: 500, padding: 50, marginLeft: 500 }}> */}
           <CircularProgressbar value={percentage} text={`${percentage}%`} />
-        </div>
+        {/* </div> */}
       </div>
     );
   }
