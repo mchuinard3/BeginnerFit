@@ -28,9 +28,9 @@ function Nav() {
               Select From Workouts
             </Link>
 
-            <Link className="navLink" to="/workoutType">
+            {/* <Link className="navLink" to="/workoutType/:id">
               Workout Type
-            </Link>
+            </Link> */}
 
             <Link className="navLink" to="/workoutHistory">
               Workout History

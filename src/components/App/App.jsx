@@ -17,11 +17,12 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import './App.css';
 
-
 function App() {
   const dispatch = useDispatch();
 
   const user = useSelector(store => store.user);
+
+  
 
   useEffect(() => {
     dispatch({ type: 'FETCH_USER' });
@@ -58,7 +59,7 @@ function App() {
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
-            path="/workoutType"
+            path="/workoutType/:id"
           >
             <WorkoutType />
           </ProtectedRoute>

@@ -2,7 +2,7 @@ import { React, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ReactPlayer from 'react-player';
 import swal from 'sweetalert';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import Swal from 'sweetalert2'
@@ -18,6 +18,7 @@ function WorkoutType() {
 
   const [value, setDate] = useState('');
   const history = useHistory();
+  let {id} = useParams();
 
   const [weightOne, setWeightOne] = useState(0);
   const [weightTwo, setWeightTwo] = useState(0);
@@ -28,6 +29,10 @@ function WorkoutType() {
 
   useEffect(() => {
     dispatch({ type: 'GET_WORKOUT' });
+  }, []);
+
+  useEffect(() => {
+    dispatch({ type: 'GET_SINGLE_WORKOUT', payload: id });
   }, []);
 
   const singleWorkout = useSelector(store => store.singleWorkoutReducer);
@@ -50,12 +55,10 @@ function WorkoutType() {
         exercise_4: singleWorkout.exercise_4,
         user_id: user.id
       }
-      
+
     })
     history.push(`/workoutHistory`)
     MySwal.fire(`Way to get it done ${user.username}, check out your workout history!`);
-   
-
   }
 
   return (

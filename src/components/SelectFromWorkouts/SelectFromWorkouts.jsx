@@ -2,7 +2,7 @@ import { React, useEffect } from 'react';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
@@ -24,6 +24,8 @@ function SelectFromWorkouts() {
 
   const user = useSelector((store) => store.user);
 
+  
+
   useEffect(() => {
     dispatch({ type: 'GET_WORKOUT' });
   }, []);
@@ -34,10 +36,12 @@ function SelectFromWorkouts() {
 
   const handleWorkout = (id) => {
     dispatch({ type: 'GET_SINGLE_WORKOUT', payload: id });
-    history.push('/workoutType');
+    history.push(`/workoutType/${id}`);
     MySwal.fire(`Have a good workout ${user.username}!`);
 
   }
+
+  // let {id} = useParams();
 
   return (
 
