@@ -33,10 +33,12 @@ function Nav() {
             </Link> */}
 
             <Link className="navLink" to="/workoutHistory">
-              Workout History
+              Workout History Table
             </Link>
 
-           
+            <Link className="navLink" to="/progressBar">
+              Weekly Progress Bar
+            </Link>
 
             <LogOutButton className="navLink" />
           </>

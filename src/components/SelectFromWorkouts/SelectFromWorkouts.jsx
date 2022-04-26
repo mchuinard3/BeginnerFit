@@ -24,8 +24,6 @@ function SelectFromWorkouts() {
 
   const user = useSelector((store) => store.user);
 
-  
-
   useEffect(() => {
     dispatch({ type: 'GET_WORKOUT' });
   }, []);
@@ -40,8 +38,6 @@ function SelectFromWorkouts() {
     MySwal.fire(`Have a good workout ${user.username}!`);
 
   }
-
-  // let {id} = useParams();
 
   return (
 
@@ -66,7 +62,7 @@ function SelectFromWorkouts() {
                 variant="light"
                 className="rounded-pill"
                 size="md"
-                style={{ padding: 5, margin: 10, width: 180, height: 40 }}
+                style={{ padding: 5, margin: 15, width: 180, height: 40 }}
                 key={i} onClick={(event) => handleWorkout(exercise.id)}>{exercise.workout_name}   </Button>
             </ButtonGroup>);
         })}

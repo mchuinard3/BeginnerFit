@@ -18,7 +18,7 @@ function WorkoutType() {
 
   const [value, setDate] = useState('');
   const history = useHistory();
-  let {id} = useParams();
+  let { id } = useParams();
 
   const [weightOne, setWeightOne] = useState(0);
   const [weightTwo, setWeightTwo] = useState(0);

@@ -23,6 +23,18 @@ function* getSingleWorkout(action) {
 
 }
 
+// function* getWorkoutProgress(action) {
+//     const id = action.payload;
+//     console.log(action.payload);
+//     try {
+//         const response = yield axios.get(`/api/workoutHistory/${id}`);
+//         yield put({ type: 'SET_SINGLE_WORKOUT', payload: response.data });
+//     } catch (error) {
+//         console.log('Workout get request failed', error);
+//     }
+
+// }
+
 function* getWorkoutHistory() {
 
     try {
@@ -74,6 +86,7 @@ function* workoutSaga() {
     yield takeEvery('GET_WORKOUT_HISTORY', getWorkoutHistory);
     yield takeEvery('DELETE_WORKOUT', deleteWorkout);
     yield takeEvery('EDIT_WORKOUT', editWorkout);
+    // yield takeEvery('GET_WORKOUT_PROGRESS', getWorkoutProgress);
 }
 
 export default workoutSaga;
