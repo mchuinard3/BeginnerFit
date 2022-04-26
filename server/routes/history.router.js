@@ -27,16 +27,6 @@ router.delete('/:id', rejectUnauthenticated, (req, res) => {
         });
 });
 
-// router.get('/:id', rejectUnauthenticated, (req, res) => {
-//     const query = `SELECT COUNT(*) FROM "history" WHERE "date" BETWEEN (NOW() - interval '7 day') AND NOW() AND "id"=$1;`
-  
-//     pool.query(query, [req.user.id])
-//       .then((results) => res.send(results.rows))
-//       .catch((err) => {
-//         console.log('Error in workout GET', err);
-//       })
-//   })
-
 router.put('/', rejectUnauthenticated, (req, res) => {
     const updatedWeight = req.body;
     const queryText = `UPDATE "history"

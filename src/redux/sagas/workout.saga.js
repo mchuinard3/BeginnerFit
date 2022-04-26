@@ -27,7 +27,7 @@ function* getSingleWorkout(action) {
 //     const id = action.payload;
 //     console.log(action.payload);
 //     try {
-//         const response = yield axios.get(`/api/workoutHistory/${id}`);
+//         const response = yield axios.get(`/api/workoutProgress/${id}`);
 //         yield put({ type: 'SET_SINGLE_WORKOUT', payload: response.data });
 //     } catch (error) {
 //         console.log('Workout get request failed', error);
