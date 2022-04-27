@@ -7,12 +7,40 @@ import { Button, Container, Row, Col } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import moment from 'moment';
+import {
+    LineChart,
+    ResponsiveContainer,
+    Legend, Tooltip,
+    Line,
+    XAxis,
+    YAxis,
+    CartesianGrid
+} from 'recharts';
 
 /*
 This component contains the user workout 
 history table.
 */
 function EditWorkout({ lift }) {
+
+    const data = [
+        {
+            exercise: lift.exercise_1,
+            weight: Number(lift.weight_used_1)
+        },
+        {
+            exercise: lift.exercise_2,
+            weight: Number(lift.weight_used_2)
+        },
+        {
+            exercise: lift.exercise_3,
+            weight: Number(lift.weight_used_3)
+        },
+        {
+            exercise: lift.exercise_4,
+            weight: Number(lift.weight_used_4)
+        },
+    ];
 
     const day = moment(lift.date).format("dddd, MMMM Do YYYY");
 
@@ -45,7 +73,7 @@ function EditWorkout({ lift }) {
 
         <>
 
-            <h5 className="centerTitle">Workout History</h5>
+            <h5 className="centerTitle">Workout History Table</h5>
             <Table variant="dark" size="lg" padding="sm" className="alignTable">
                 <thead>
                     <tr >
@@ -77,7 +105,7 @@ function EditWorkout({ lift }) {
 
                             :
 
-                            <div>{lift.weight_used_1} </div>
+                            <div>{lift.weight_used_1} lbs </div>
                         }</td>
                         <td>{lift.exercise_2}</td>
                         <td>{editMode ?
@@ -89,7 +117,7 @@ function EditWorkout({ lift }) {
 
                             :
 
-                            <div>{lift.weight_used_2} </div>
+                            <div>{lift.weight_used_2} lbs</div>
                         }</td>
                         <td>{lift.exercise_3}</td>
                         <td>{editMode ?
@@ -101,7 +129,7 @@ function EditWorkout({ lift }) {
 
                             :
 
-                            <div>{lift.weight_used_3} </div>
+                            <div>{lift.weight_used_3} lbs</div>
                         }</td>
                         <td>{lift.exercise_4}</td>
                         <td>{editMode ?
@@ -113,7 +141,7 @@ function EditWorkout({ lift }) {
 
                             :
 
-                            <div>{lift.weight_used_4} </div>
+                            <div>{lift.weight_used_4} lbs</div>
                         }</td>
                         <td>{day}</td>
 
@@ -158,6 +186,28 @@ function EditWorkout({ lift }) {
                         </Button>
                     </ButtonGroup>}
             </div>
+            <h5 className="centerChart">Weight Used Chart</h5>
+            <div className="chart">
+           
+                <ResponsiveContainer width="90%" aspect={3} align="center" >
+                    <LineChart data={data} >
+                        <CartesianGrid />
+                        <XAxis dataKey="exercise"
+                            interval={'preserveStartEnd'} />
+                        <YAxis></YAxis>
+                        <Legend />
+                        <Tooltip />
+                        {/* <Line dataKey="exercise"
+                        stroke="white" activeDot={{ r: 8 }} /> */}
+                        <Line dataKey="weight"
+                            stroke="#4169e1" activeDot={{ r: 8 }} />
+                    </LineChart>
+                </ResponsiveContainer>
+            </div>
+
+
+
+
         </>
 
     )

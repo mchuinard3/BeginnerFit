@@ -27,6 +27,13 @@ img {
   margin-right: auto;
 }
 
+.chart {
+  margin-left: 120px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+}
+
 .technologies {
   text-align: center;
   padding: 25px;
@@ -46,6 +53,14 @@ img {
   font-size: 25px;
   margin-top: 2px;
   margin-bottom: 15px;
+}
+
+.centerChart {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+
 }
 
 .alignTable {

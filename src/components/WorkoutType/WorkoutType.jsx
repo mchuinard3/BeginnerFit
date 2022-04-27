@@ -104,13 +104,13 @@ function WorkoutType() {
             style={{ width: 14, height: 14 }} />
         </Col>
         <Col
-          style={{ fontSize: 25 }}>Weight Used:
+          style={{ fontSize: 25 }}>Weight Used in lbs:
           <input
             type="text"
             className="border rounded"
             size="7"
             style={{ padding: 10, margin: 5, height: 25, width: 150 }}
-            onChange={(event) => setWeightOne(event.target.value)} />
+            onChange={(event) => setWeightOne(event.target.value)} /> 
         </Col>
         <div>
           <h4>___________________________________________</h4>
@@ -152,7 +152,7 @@ function WorkoutType() {
             style={{ width: 14, height: 14 }} />
         </Col>
         <Col
-          style={{ fontSize: 25 }}>Weight Used:<input
+          style={{ fontSize: 25 }}>Weight Used in lbs:<input
             type="text"
             className="border rounded"
             size="7"
@@ -199,7 +199,7 @@ function WorkoutType() {
             style={{ width: 14, height: 14 }} />
         </Col>
         <Col
-          style={{ fontSize: 25 }}>Weight Used:<input
+          style={{ fontSize: 25 }}>Weight Used in lbs:<input
             type="text"
             className="border rounded"
             size="7"
@@ -244,7 +244,7 @@ function WorkoutType() {
             style={{ width: 14, height: 14 }} />
         </h3>
         <Col
-          style={{ fontSize: 25 }}>Weight Used:<input
+          style={{ fontSize: 25 }}>Weight Used in lbs:<input
             type="text"
             className="border rounded"
             size="7"
