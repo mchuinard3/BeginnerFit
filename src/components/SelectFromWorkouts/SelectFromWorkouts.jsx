@@ -46,9 +46,9 @@ function SelectFromWorkouts() {
       <Col
         style={{ fontSize: 25, padding: 4 }}>Welcome, {user.username}!
       </Col>
-      <Col
+      {/* <Col
         style={{ fontSize: 25, padding: 4 }}>Your ID is: {user.id}
-      </Col>
+      </Col> */}
       <Col
         style={{ fontSize: 25, padding: 4 }}>Select From Workouts
       </Col>
