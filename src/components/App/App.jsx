@@ -16,7 +16,6 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import './App.css';
-import ProgressBar from '../ProgressBar/ProgressBar';
 import TechnologiesUsed from '../TechnologiesUsed/TechnologiesUsed';
 
 
@@ -25,7 +24,7 @@ function App() {
 
   const user = useSelector(store => store.user);
 
-  
+
 
   useEffect(() => {
     dispatch({ type: 'FETCH_USER' });
@@ -41,7 +40,7 @@ function App() {
 
           {/* Visiting localhost:3000/about will show the about page. */}
           <Route
-            
+
             exact
             path="/workoutHistory"
           >
@@ -49,22 +48,14 @@ function App() {
           </Route>
 
           <Route
-            
-            exact
-            path="/progressBar"
-          >
-            <ProgressBar />
-          </Route>
 
-          <Route
-            
             exact
             path="/technologiesUsed"
           >
             <TechnologiesUsed />
           </Route>
 
-         
+
           {/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:3000/user will show the UserPage if the user is logged in.
             If the user is not logged in, the ProtectedRoute will show the LoginPage (component).

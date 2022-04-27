@@ -1,8 +1,8 @@
 import { React } from 'react';
 
 function TechnologiesUsed() {
-  
-return (
+
+    return (
         <div className="technologies">
             <h1>Technologies Used:</h1>
             <h4>- JavaScript</h4>
@@ -13,7 +13,7 @@ return (
             <h4>- Express</h4>
             <h4>- Bootstrap</h4>
             <h4>- Passport</h4>
-</div>
+        </div>
     );
 }
 
