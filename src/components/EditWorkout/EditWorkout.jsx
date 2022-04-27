@@ -202,10 +202,6 @@ function EditWorkout({ lift }) {
                     </LineChart>
                 </ResponsiveContainer>
             </div>
-
-
-
-
         </>
 
     )
