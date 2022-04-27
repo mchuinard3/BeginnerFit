@@ -4,7 +4,7 @@ function TechnologiesUsed() {
 
     return (
         <div className="technologies">
-            <h1>Technologies Used:</h1>
+            <h1 className="techUsed">Technologies Used:</h1>
             <h4>- JavaScript</h4>
             <h4>- React</h4>
             <h4>- Redux</h4>
