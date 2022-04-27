@@ -7,27 +7,23 @@ import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 
 function ProgressBar() {
     const [percentage, setPercentage] = useState(0);
-   
+
     useEffect(() => {
-      setTimeout(() => {
-        if (percentage < 100) {
-          setPercentage(percentage + 1);
-        }
-      }, 50);
+        setTimeout(() => {
+            if (percentage < 100) {
+                setPercentage(percentage + 1);
+            }
+        }, 50);
     }, [percentage]);
 
-    // useEffect(() => {
-    //     dispatch({ type: 'GET_WORKOUT_PROGRESS' });
-    //   }, []);
-   
     return (
-      <div className="app">
-       
-        {/* <div style={{ width: 500, padding: 50, marginLeft: 500 }}> */}
-          <CircularProgressbar value={percentage} text={`${percentage}%`} />
-        {/* </div> */}
-      </div>
+        <div className="app">
+
+            {/* <div style={{ width: 500, padding: 50, marginLeft: 500 }}> */}
+            <CircularProgressbar value={percentage} text={`${percentage}%`} />
+            {/* </div> */}
+        </div>
     );
-  }
-   
-  export default ProgressBar;
+}
+
+export default ProgressBar;

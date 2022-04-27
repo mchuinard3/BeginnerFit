@@ -17,6 +17,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import './App.css';
 import ProgressBar from '../ProgressBar/ProgressBar';
+import TechnologiesUsed from '../TechnologiesUsed/TechnologiesUsed';
 
 
 function App() {
@@ -53,6 +54,14 @@ function App() {
             path="/progressBar"
           >
             <ProgressBar />
+          </Route>
+
+          <Route
+            
+            exact
+            path="/technologiesUsed"
+          >
+            <TechnologiesUsed />
           </Route>
 
          

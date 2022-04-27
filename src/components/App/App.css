@@ -27,6 +27,13 @@ img {
   margin-right: auto;
 }
 
+.technologies {
+  text-align: center;
+  padding: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .center {
   text-align: center;
   margin-top: 15px;
