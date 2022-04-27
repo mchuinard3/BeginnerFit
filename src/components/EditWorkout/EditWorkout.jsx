@@ -188,8 +188,8 @@ function EditWorkout({ lift }) {
             </div>
             <h5 className="centerChart">Weight Used Chart</h5>
             <div className="chart">
-           
-                <ResponsiveContainer width="90%" aspect={3} align="center" >
+
+                <ResponsiveContainer width="100%" aspect={3} align="center" >
                     <LineChart data={data} >
                         <CartesianGrid />
                         <XAxis dataKey="exercise"
@@ -197,8 +197,6 @@ function EditWorkout({ lift }) {
                         <YAxis></YAxis>
                         <Legend />
                         <Tooltip />
-                        {/* <Line dataKey="exercise"
-                        stroke="white" activeDot={{ r: 8 }} /> */}
                         <Line dataKey="weight"
                             stroke="#4169e1" activeDot={{ r: 8 }} />
                     </LineChart>
