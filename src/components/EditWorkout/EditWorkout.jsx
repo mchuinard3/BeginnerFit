@@ -195,8 +195,8 @@ function EditWorkout({ lift }) {
                         <YAxis></YAxis>
                         <Legend />
                         <Tooltip />
-                        <Line dataKey="weight"
-                            stroke="#4169e1" activeDot={{ r: 8 }} />
+                        <Line dataKey="weight" 
+                            stroke="red" activeDot={{ r: 8 }} strokeWidth={10} />
                     </LineChart>
                 </ResponsiveContainer>
             </div>
