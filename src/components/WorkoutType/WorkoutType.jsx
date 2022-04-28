@@ -1,10 +1,9 @@
 import { React, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ReactPlayer from 'react-player';
-import swal from 'sweetalert';
 import { useHistory, useParams } from 'react-router-dom';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import { Button, Container, Row, Col } from 'react-bootstrap';
+import { Button, Col } from 'react-bootstrap';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
@@ -110,7 +109,7 @@ function WorkoutType() {
             className="border rounded"
             size="7"
             style={{ padding: 10, margin: 5, height: 25, width: 150 }}
-            onChange={(event) => setWeightOne(event.target.value)} /> 
+            onChange={(event) => setWeightOne(event.target.value)} />
         </Col>
         <div>
           <h4>___________________________________________</h4>

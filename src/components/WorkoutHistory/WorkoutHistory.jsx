@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux'; import EditWorkout from '../EditWorko
 This component displays the workout history
 table from the EditWorkout component.
 */
-function WorkoutHistory({ }) {
+function WorkoutHistory() {
 
   const workoutHistory = useSelector(store => store.workoutHistoryReducer);
   console.log(workoutHistory);
