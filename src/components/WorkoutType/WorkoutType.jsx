@@ -108,7 +108,7 @@ function WorkoutType() {
             type="text"
             className="border rounded"
             size="7"
-            style={{ padding: 10, margin: 5, height: 25, width: 150 }}
+            style={{ padding: 10, margin: 5, height: 25, width: 65 }}
             onChange={(event) => setWeightOne(event.target.value)} />
         </Col>
         <div>
@@ -155,7 +155,7 @@ function WorkoutType() {
             type="text"
             className="border rounded"
             size="7"
-            style={{ padding: 10, margin: 5, height: 25, width: 150 }}
+            style={{ padding: 10, margin: 5, height: 25, width: 65 }}
             onChange={(event) => setWeightTwo(event.target.value)} />
         </Col>
         <div>
@@ -202,7 +202,7 @@ function WorkoutType() {
             type="text"
             className="border rounded"
             size="7"
-            style={{ padding: 10, margin: 5, height: 25, width: 150 }}
+            style={{ padding: 10, margin: 5, height: 25, width: 65 }}
             onChange={(event) => setWeightThree(event.target.value)} />
         </Col>
         <div>
@@ -247,7 +247,7 @@ function WorkoutType() {
             type="text"
             className="border rounded"
             size="7"
-            style={{ padding: 10, margin: 5, height: 25, width: 150 }}
+            style={{ padding: 10, margin: 5, height: 25, width: 65 }}
             onChange={(event) => setWeightFour(event.target.value)} />
         </Col>
         <div>
@@ -260,7 +260,7 @@ function WorkoutType() {
           type="date"
           className="border rounded"
           size="7"
-          style={{ padding: 10, margin: 5, height: 25, width: 150 }}
+          style={{ padding: 10, margin: 5, height: 25, width: 140 }}
           onChange={(event) => setDate(event.target.value)} />
       </div>
 
@@ -274,7 +274,7 @@ function WorkoutType() {
           className="rounded-pill"
           size="lg"
           style={{ padding: 5, margin: 17, width: 150 }}
-          onClick={addWorkout} >I'm Done
+          onClick={addWorkout} >I'm Done 💪
         </Button>
       </ButtonGroup>
     </main>

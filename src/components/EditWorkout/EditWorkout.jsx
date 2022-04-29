@@ -97,7 +97,9 @@ function EditWorkout({ lift }) {
                         <td>{editMode ?
 
                             <input
+                                className="weightInput"
                                 type="text"
+                                // width={170}
                                 value={editWorkout.weight_used_1}
                                 onChange={(event) => handleChange(event, 'weight_used_1')} />
 
@@ -109,6 +111,7 @@ function EditWorkout({ lift }) {
                         <td>{editMode ?
 
                             <input
+                                className="weightInput"
                                 type="text"
                                 value={editWorkout.weight_used_2}
                                 onChange={(event) => handleChange(event, 'weight_used_2')} />
@@ -121,6 +124,7 @@ function EditWorkout({ lift }) {
                         <td>{editMode ?
 
                             <input
+                                className="weightInput"
                                 type="text"
                                 value={editWorkout.weight_used_3}
                                 onChange={(event) => handleChange(event, 'weight_used_3')} />
@@ -133,6 +137,7 @@ function EditWorkout({ lift }) {
                         <td>{editMode ?
 
                             <input
+                                className="weightInput"
                                 type="text"
                                 value={editWorkout.weight_used_4}
                                 onChange={(event) => handleChange(event, 'weight_used_4')} />
@@ -195,7 +200,7 @@ function EditWorkout({ lift }) {
                         <YAxis></YAxis>
                         <Legend />
                         <Tooltip />
-                        <Line dataKey="weight" 
+                        <Line dataKey="weight"
                             stroke="red" activeDot={{ r: 8 }} strokeWidth={10} />
                     </LineChart>
                 </ResponsiveContainer>

@@ -34,6 +34,10 @@ img {
   
 }
 
+.weightInput {
+  width: 37px;
+}
+
 .technologies {
   text-align: center;
   padding: 25px;

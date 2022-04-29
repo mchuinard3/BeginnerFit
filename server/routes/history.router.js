@@ -6,8 +6,8 @@ const {
 } = require('../modules/authentication-middleware');
 
 router.get('/', rejectUnauthenticated, (req, res) => {
-    const query = `SELECT b.workout_name, a.* FROM "history" a JOIN "exercises" b ON a.exercise_1 =b.exercise_1 ORDER BY "date" DESC;`
-    pool.query(query)
+    const query = `SELECT b.workout_name, a.* FROM "history" a JOIN "exercises" b ON a.exercise_1 =b.exercise_1 WHERE a."user_id" = $1 ORDER BY "date" DESC;`
+    pool.query(query, [req.user.id])
         .then((results) => res.send(results.rows))
         .catch((err) => {
             console.log('Error in workout GET', err);
