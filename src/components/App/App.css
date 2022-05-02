@@ -110,6 +110,7 @@ width: 500px;
   padding: 20px;
   background-color: black;
   color: white;
+  text-align: center;
 }
 
 .button1 {
@@ -126,8 +127,14 @@ width: 500px;
 }
 
 .btn_sizeSm {
-  padding: 10px 15px;
-  font-size: 0.8rem;
+  padding: 5px;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 20px;
+  width: 90px;
+  
 }
 
 .btn_sizeFull {
@@ -188,6 +195,8 @@ input {
   margin: 5px;
   margin-bottom: 10px;
 }
+
+
 
 
 
