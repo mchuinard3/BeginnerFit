@@ -4,8 +4,9 @@ import ReactPlayer from 'react-player';
 import { useHistory, useParams } from 'react-router-dom';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { Button, Col } from 'react-bootstrap';
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import swal from 'sweetalert';
+// import Swal from 'sweetalert2'
+// import withReactContent from 'sweetalert2-react-content'
 
 /*
 This component displays each workout selected 
@@ -13,7 +14,7 @@ from the previous page to the DOM.
 */
 function WorkoutType() {
 
-  const MySwal = withReactContent(Swal);
+  // const MySwal = withReactContent(Swal);
 
   const [value, setDate] = useState('');
   const history = useHistory();
@@ -57,7 +58,7 @@ function WorkoutType() {
 
     })
     history.push(`/workoutHistory`)
-    MySwal.fire(`Way to get it done ${user.username}, check out your workout history!`);
+    swal(`Way to get it done ${user.username}, check out your workout history!`);
   }
 
   return (
