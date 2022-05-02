@@ -1,6 +1,9 @@
 {
   "name": "prime-solo-project",
   "version": "0.1.0",
+  "engines": {
+    "node": "16.x"
+  },
   "private": true,
   "proxy": "http://localhost:5000",
   "dependencies": {
@@ -46,6 +49,7 @@
   "devDependencies": {
     "nodemon": "^2.0.4"
   },
+ 
   "browserslist": [
     ">0.2%",
     "not dead",
