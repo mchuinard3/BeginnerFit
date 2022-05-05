@@ -9,6 +9,16 @@ My fiancé recently told me she wanted to start going to the gym but she is conc
 
 - JavaScript, React, Redux, Redux-Saga, Postgres, Node, Express, Bootstrap, and Passport
 
+## **Screenshots**
+
+![ScreenShot 1](/ScreenShot1.png?raw=true "Screenshot")
+![ScreenShot 2](/ScreenShot2.png?raw=true "Screenshot")
+![ScreenShot 3](/ScreenShot3.png?raw=true "Screenshot")
+![ScreenShot 4](/ScreenShot4.png?raw=true "Screenshot")
+![ScreenShot 5](/ScreenShot5.png?raw=true "Screenshot")
+![ScreenShot 6](/ScreenShot6.png?raw=true "Screenshot")
+
+
 ## **Acknowledgment**
 
 Credit goes to Prime Digital Academy and my instructor Dane Smith for giving me the instruction and knowledge to make this project possible.
