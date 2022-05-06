@@ -11,7 +11,7 @@ My fiancé recently told me she wanted to start going to the gym but she is conc
 
 ## **Heroku Deploy Link**
 
-https://fierce-crag-86195.herokuapp.com/#/user 
+https://fierce-crag-86195.herokuapp.com/#/home  
 
 ## **Screenshots**
 
